@@ -42,6 +42,25 @@ public class SingletonHelper {
 		   		}
 		   return conn;
 	   }
+	   
+	   // 과제 2를 위한 함수
+	   public static Connection getConnection(String dsn , String dbn, String id , String pwd) {
+		   if(conn != null) {
+			   System.out.println("conn : " + conn);
+			   return conn;
+		   }
+		   try {
+			   		if(dsn.equals("oracle")) {
+			   			conn =	DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe",id,pwd);
+			   		}else if(dsn.equals("mariadb")) {
+			   			conn= DriverManager.getConnection("jdbc:mariadb://127.0.0.1:3306/"+dbn,id,pwd);
+			   		}
+		   		} catch (Exception e) {
+		   			System.out.println(e.getMessage());
+		   		}
+		   return conn;
+	   }
+	   
 	   public static void dbClose() {
 		   if(conn != null) {
 			   try {

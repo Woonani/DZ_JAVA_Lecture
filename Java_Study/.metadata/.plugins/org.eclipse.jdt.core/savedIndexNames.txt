@@ -8,6 +8,7 @@ INDEX VERSION 1.131+C:\Users\KOSA\Desktop\DZ_JAVA_Lecture\Java_Study\.metadata\.
 1667593761.index
 681541635.index
 1957691506.index
+2344469092.index
 1269627254.index
 3961881473.index
 2115653635.index
