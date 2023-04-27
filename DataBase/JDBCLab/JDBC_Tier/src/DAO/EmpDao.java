@@ -7,6 +7,7 @@ package DAO;
 
 */
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -21,6 +22,40 @@ import UTILS.SingletonHelper;
 
 public class EmpDao {
 	
+	public Emp getEmpListBySal(int sal) {
+		
+		Emp emp = null; //
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		CallableStatement cstmt = null;
+
+		try {
+			conn = SingletonHelper.getConnection("mariadb", "kosadb", "super", "1004");
+			String sql = "call selec_by_EmpList(?)";
+			cstmt = conn.prepareCall(sql);
+			cstmt.setInt(1, sal);
+			rs = cstmt.executeQuery();
+
+			while (rs.next()) {
+				emp = new Emp(); // 하나의 row 담기 위한 객체
+				emp.setEmpno(rs.getInt("empno"));
+				emp.setEname(rs.getString("ename"));
+				emp.setJob(rs.getString("job"));
+				emp.setSal(rs.getInt("sal"));
+				emp.setHiredate(rs.getDate("hiredate"));
+				System.out.println(rs.getInt("empno") + "/" + rs.getString("ename") + "/" + rs.getInt("sal"));
+			}
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		} finally {
+			SingletonHelper.close(rs);
+			SingletonHelper.close(pstmt);
+		}
+
+		return emp;
+	}
+	//////////////////////////////////////////////////////////////////////////////////////////////////////
 	//1. 전체조회 >> select 결과 >> return multi row  (Dept 객체 여러개)
 	//select deptno , dname , loc from dept
 	public List<Emp> getEmpAllList(){

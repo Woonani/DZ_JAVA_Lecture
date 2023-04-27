@@ -1,12 +1,9 @@
-import java.sql.Date;
 import java.text.ParseException;
 import java.util.List;
 
 import DAO.DeptDao;
-import DAO.DeptDao2;
 import DAO.EmpDao;
 import DTO.Dept;
-import DTO.Dept2;
 import DTO.Emp;
 
 /*
@@ -29,8 +26,10 @@ public class Assignment2 {
 
 	public static void main(String[] args) throws ParseException {
 		
+		EmpDao dao2 = new EmpDao();
+		Emp emp = dao2.getEmpListBySal(2000);
 		
-		DeptDao2 dao = new DeptDao2();
+		DeptDao dao = new DeptDao();
 		
 		System.out.println("[전체조회]");
 		

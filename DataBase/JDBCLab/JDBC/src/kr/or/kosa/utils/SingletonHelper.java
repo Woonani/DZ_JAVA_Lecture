@@ -1,5 +1,6 @@
 package kr.or.kosa.utils;
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -40,6 +41,19 @@ public class SingletonHelper {
 		   		} catch (Exception e) {
 		   			System.out.println(e.getMessage());
 		   		}
+		   return conn;
+	   }
+	   public static Connection getConnection(String dsn , String dbn, String id , String pwd) {
+		   Connection conn = null;
+		   try {
+			   if(dsn.equals("oracle")) {
+				   conn =	DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe",id,pwd);
+			   }else if(dsn.equals("mariadb")) {
+				   conn= DriverManager.getConnection("jdbc:mariadb://127.0.0.1:3306/"+dbn ,id,pwd);
+			   }
+		   } catch (Exception e) {
+			   System.out.println(e.getMessage());
+		   }
 		   return conn;
 	   }
 	   public static void dbClose() {
@@ -88,6 +102,15 @@ public class SingletonHelper {
 			} catch (Exception e) {
 				  System.out.println(e.getMessage());
 			}
+		   }
+	   }
+	   public static void close(CallableStatement cstmt) {
+		   if(cstmt != null) {
+			   try {
+				   cstmt.close();
+			   } catch (Exception e) {
+				   System.out.println(e.getMessage());
+			   }
 		   }
 	   }
 }
