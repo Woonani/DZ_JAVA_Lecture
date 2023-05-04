@@ -21,7 +21,7 @@ import DTO.Emp;
 import UTILS.SingletonHelper;
 
 public class EmpDao {
-	
+		
 	public Emp getEmpListBySal(int sal) {
 		
 		Emp emp = null; //
