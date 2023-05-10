@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+	 div{
+	 background-color: black;
+	 }
+	</style>
+</head>
+<body>
+	<div> df</div>
+	<div style="background-color:gray; float: left;">df</div>
+	<div style="background-color:gray; float: left;">df</div>
+	
+	<div style=" clear: both;">df</div>
+</body>
+</html>

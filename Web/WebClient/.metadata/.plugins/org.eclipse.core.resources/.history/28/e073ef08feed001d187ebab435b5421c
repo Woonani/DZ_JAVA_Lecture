@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+	 div{
+	 background-color: black;
+	 }
+	</style>
+</head>
+<body>
+	<div>ss </div>
+	<div style="background-color:gray; float: left;"> gg</div>
+	<div style="background-color:gray; float: left;">gg </div>
+	
+	<div style=" clear: both;">ss </div>
+</body>
+</html>

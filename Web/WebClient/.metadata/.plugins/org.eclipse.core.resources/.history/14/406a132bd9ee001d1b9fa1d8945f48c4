@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		window.document.write("헬로<br>");
+		document.write("window객체 생갹가능<br>");
+		console.log("디버깅, 결과 미리보기, 오류메시지 확인");
+		console.log(10+10);
+		
+		document.write("<b>hello world</b>");
+		document.write('<table border="1">');
+		document.write('<tr><td>aa</td><td>bb</td></tr>');
+		document.write('</table>');
+		
+		//var, let, const
+		var num; 
+	</script>
+</head>
+<body>
+
+</body>
+</html>

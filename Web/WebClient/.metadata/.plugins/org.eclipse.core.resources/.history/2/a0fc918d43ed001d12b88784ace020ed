@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <title>연습문제 2</title>
+    <style>
+			#container { 
+				width:520px;
+				border:1px solid black;
+				
+				padding:20px 40px;
+				margin:0 auto;
+			}
+      fieldset { margin-bottom:15px; }
+      legend { font-weight:bold; }
+			ul {list-style-type: none;}
+			li { line-height:30px;}
+			table, td, th {
+      border:1px solid #ccc;
+    }
+    td, th {
+      padding:10px 20px;
+    }
+    td:last-child{
+      width:200px;
+    }
+    </style>
+  </head>
+  <body>
+  <table>
+     <h1>수습 국원 지원 양식</h1> 
+    <tr>
+      <th rowspan="3">개인정보</th>
+      <th>이름</th>
+      <td></td>
+    </tr>
+    <tr>
+      <th>학과/학번</th>
+      <td></td>
+    </tr>
+    <tr>
+      <th>연락처</th>
+      <td></td>
+    </tr>
+    <tr>
+      <th>지원 분야</th>
+      <td colspan="2"></td>
+    </tr>
+  </table>
+  <div id = "container">
+        <h1>회원 가입을 환영합니다</h1>
+        <!-- <form  autocomplete="off"> -->
+        <form action="register.php" autocomplete="off">
+            <fieldset>
+                <legend>사용자 정보</legend>
+        
+                <li>
+                    <label for="uid">아이디</label>
+                    <input type="text" id="uid">                    
+                </li>
+                <li>
+                    <label for="umail">이메일</label>
+                    <input type="email" id="umail">
+                </li>
+                <li>
+                    <label for="pwd1">비밀번호</label>
+                    <input type="password" id = "pwd1">
+                </li>
+                <li>
+                    <label for="pwd2">비밀번호 확인</label>
+                    <input type="password" id = "pwd2">
+                </li>
+            </fieldset>
+            <fieldset>
+                <legend>이벤트와 새로운 소식</legend>
+                <input type="radio" name="mailing" id="mailing_y">
+                <label for="mailing_y">메일수신</label>
+                <input type="radio" name="mailing" id="mailing_n" checked>
+                <label for="mailing_n">메일수신안함</label>
+            </fieldset>
+            <div>
+                <input type="submit" value="가입하기">
+                <input type="reset" value="취소">
+                <input type="image" src="images/login.png" alt="로그인">
+                <input type="file">
+            </div>
+        </form>
+        <ul>
+            <li>
+                <label><input type="checkbox" value="s_3">선물용 3kg</label>
+                <input type="number" max="5" min="0" >개 (최대 5개)
+            </li>
+            <li>
+                <label><input type="checkbox" value="s_3">선물용 5kg</label>
+                <input type="range" max="3" min="0" value="1">개 (최대 3개)
+            </li>
+        </ul>
+    </div>
+		<div id="container">
+			<h1>프런트엔드 개발자 지원서 </h1>
+			<p>HTML, CSS, Javascript에 대한 기술적 이해와 경험이 있는 분을 찾습니다.</p>
+			<hr>
+			<form>
+				<br>
+				<h4>개인정보</h4>
+				<ul>
+					<li>
+						<label for="r-name">이름</label>
+						<input type="text" id="r-name" autofocus placeholder="공백 없이 입력하세요">
+					</li>
+					<li>
+						<label for="r-tel">연락처</label>
+						<input type="tel" id = "r-tel">
+					</li>
+				</ul>
+				<h4>지원 분야aaa</h4>
+				<ul>
+					<li>
+						<input type="radio" id="web_pub" name="field">
+						<label for="web_pub">웹 퍼블리싱</label> 
+					</li>
+					<li>
+						<input type="radio" id="web_app" name="field">
+						<label for="web_app">웹 애플리케이션 개발</label>
+					</li>
+					<li>
+						<input type="radio" id="dev_env" name="field">
+						<label for="dev_env">개발 환경 개선</label>
+					</li>
+				</ul>
+
+				<label for="">
+					<h4>지원 동기</h4>
+					<textarea name="motivation" id="motivation" cols="60" rows="5" placeholder="본사 지원 동기를 간략히 써 주세요."></textarea>
+				</label>
+
+				<div>
+					<input type="submit" value="접수하기">
+					<input type="reset" value="다시 쓰기">
+				</div>
+				
+			</form>
+		</div>
+  </body>
+</html>

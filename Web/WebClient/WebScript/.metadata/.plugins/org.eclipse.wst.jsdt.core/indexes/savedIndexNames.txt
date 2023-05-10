@@ -1,0 +1,6 @@
+INDEX VERSION 1.4+C:\Douzone\Web\WebClient\WebScript\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2324310610.index
+497947423.index
+2809461825.index
+3451222783.index
+854812632.index

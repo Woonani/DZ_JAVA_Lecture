@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	1. HTML describes the structure of a Web page <br>
+	2. HTML5가 웹 표준이다 <br>
+	3. web 브라우저 (소프트웨어) 역할 (해석기) : html, css, javascript 해석...<br>
+	4. F12 개발자 도구 가지고 놀기 <br>
+	<p>
+	1. Front 개발 : 메모장, 웹 브라우저 <br>
+	2. Tool      : VS 코드, (Live Server > 아파치 > 웹에서만 제공 > html, css, javascript 가능) <br>
+	3. Front 개발 , Back 개발 : 아파치 톰켓 (web server + was) > 이클립스 사용 <br>
+	</p>
+	<h3>This is heading 3</h3>
+	<p>This is a paragraph.</p>
+	<p>This is another paragraph.</p>
+	<a href="https://www.w3schools.com">This is a link</a>
+	<br>
+	<img src="images/w3schools.jpg" alt="W3Schools.com" width="104" height="142">
+	<br>
+	<p style="color:gold;">This is a red paragraph.</p>
+	<br><br><br>
+</body>
+</html>

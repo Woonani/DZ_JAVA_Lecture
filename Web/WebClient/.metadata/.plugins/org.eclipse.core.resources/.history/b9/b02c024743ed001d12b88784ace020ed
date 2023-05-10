@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>연습문제 1</title>
+	
+	<style>
+		ul {
+			list-style:none;
+		}
+		li {
+			line-height:50px;
+		}
+		label {
+			width:60px;
+			float:left;
+		}
+	</style>
+</head>
+<body>
+	<h1>예약 정보</h1>
+	<form action="">
+		<ol>
+			<label for="r-name">이름</label>
+			<input type="text" id ="r-name">
+		</ol>
+		<ol>
+			<label for="r-phone">전화</label>
+			<input type="tel" id ="r-phone">
+		</ol>
+		<ol>
+			<label for="r-email">이메일</label>
+			<input type="email" id ="r-email">
+		</ol>
+		<ol>
+			<input type="submit" value="예약하기">
+		</ol>
+
+	</form>
+</body>
+</html>

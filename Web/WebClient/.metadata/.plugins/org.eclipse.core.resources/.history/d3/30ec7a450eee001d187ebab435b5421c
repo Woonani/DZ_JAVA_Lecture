@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="">
+		<fieldset>
+			<legend>Text:Password</legend>
+			Text : <input type="text" name="userid" id="userid">
+			<!-- 서버에 값을 보내려면 name이 있어야 하고 css쓰려면 id가 있어야 함 -->
+			Password : <input type="password" name="pwd" maxlength="5" >
+			<hr>
+			Text : <input type="text" maxlength="10" value="기본값" size="100px"><br>
+			<hr>
+			readonly(읽기전용 : 서버로 전송 가능) <br>
+			Text : <input type="text" name="user" id="user" value="hong" readonly><br>
+			
+			
+			
+			
+			
+		</fieldset>
+	</form>
+</body>
+</html>

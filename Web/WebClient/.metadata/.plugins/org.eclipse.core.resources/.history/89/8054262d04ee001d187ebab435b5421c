@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+		#myHeader {
+			background-color: lightblue;
+			color: black;
+			padding: 40px;
+			text-align:center;
+		}
+		
+		.show{ border: 1px; } 
+	</style>
+</head>
+<body>
+	<h1 id="myHeader">My Header</h1>
+
+<!-- iframe은 해킹 문제로 안쓰니까 보지말기! -->
+</body>
+</html>

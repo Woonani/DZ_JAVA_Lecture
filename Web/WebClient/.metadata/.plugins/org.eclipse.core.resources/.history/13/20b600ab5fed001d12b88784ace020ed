@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<!-- Internal : 현재 page 내부에서만 css 적용 : 유지보수 고민 -->
+	<style type="text/css">
+		body {background-color: LightGray;}
+		h3 {color: tomato;}
+	</style>
+	<link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+<!-- 
+css 적용하는 방법 3가지
+
+Inline 방식
+Internal 방식 : page 내에서만
+External 방식 : 외부 별도의 파일 common.cs
+ -->
+ <h3>1. Inline 방식 (태그 안쪽 : style)</h3>
+ <p style="background-color: aqua">문단태그</p>
+ <h3 style="color: green">나는 무슨색(안쪽 속성이 우선한다)</h3>
+
+ <h1>외부 파일을 참조 합니다</h1>
+ <h3>웹상에서의 이미지 파일 서버에서 직접 참조 AWS s3서버 이미지저장</h3>
+ <img src="https://www.baemin.com/_next/static/images/img-bike@2x.png" width="300">
+ <hr>
+ <p>안녕<mark>하세</mark>요!!</p>
+ <p>CO<sub>2</sub></p>
+ <p>e<sup>2</sup></p>
+</body>
+</html>

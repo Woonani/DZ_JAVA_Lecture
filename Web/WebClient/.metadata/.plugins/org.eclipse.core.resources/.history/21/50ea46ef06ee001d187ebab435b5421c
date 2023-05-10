@@ -1,0 +1,21 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+	 div{
+	 background-color: black;
+	 width: 300px;
+	 margin:auto;
+	 }
+	</style>
+</head>
+<body>
+	<div >ㅎ </div>
+	<div style="background-color:gray; float: left; width: 150px;"> ㅎ<br><br><br></div>
+
+	<div style="background-color:red; float: left;  width: 150px;">ㅎ <br><br><br> </div>
+	
+	<div style=" clear: both;">ㅎ </div>
+</body>
+</html>

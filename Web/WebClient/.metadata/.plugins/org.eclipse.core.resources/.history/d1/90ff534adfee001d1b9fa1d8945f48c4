@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+	/* 
+		1. 변수 생성 > 값입력 > 타입 생성 (number, string)
+		var a; 정의됮 않음
+		let b; 
+		a= 10; 타입설정 (number)
+		b = "A" 타입설정 (string)
+		ES5 이전 문법(var) >> 
+		
+		
+		
+	*/
+	let name = 'kglim';
+	function call(){
+		let age = 20;
+		console.log("당신의 이름은 : " + name + " 나이는 : " + age);
+		document.write("당신의 이름은 : " + name + " 나이는 : " + age);
+	} 
+	
+	let n; //초기화 되어 있지 않아요 (정의되지 않았다)
+	console.log(n); //undefined
+	n=100;
+	// 사용하기 전에만 초기화 하시면 되요
+	
+	let i, j;
+	i = 200;
+	 j= 200;
+	 let result = i+j;
+	 console.log(result);
+	
+	
+	
+	</script>
+</head>
+<body>
+	<button onclick="call()" > 변수확인 <button>
+
+</body>
+</html>

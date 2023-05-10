@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+C:\Douzone\Web\WebClient\WebScript\.metadata\.plugins\org.eclipse.jdt.core
+2344469092.index
+2744742364.index

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+		table {
+			border-collapse: collapse;
+		}
+		th, td {
+			border: 1px solid red;
+			padding: 2px;
+		}
+	</style>
+</head>
+<body>
+	<h3>일반 테이블</h3>
+	<table>
+		<tr>
+			<td colspan="2">가,나</td> <td>다</td>
+		</tr>
+		<tr>
+			<td>라</td> <td>마</td> <td>바</td>
+		</tr>
+		<tr>
+			<td>사</td> <td>아</td> <td>자</td>
+		</tr>
+	</table>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>우나사이트</title>
+
+	<style type="text/css">
+		#wrap {
+			width: 100%;
+			margin : auto;
+		}
+		#header {
+			height:100px;
+			background: LightGray;
+			text-align: center;
+			padding: 20px;
+		}
+		#main {
+			margin-top: 10px;
+			height: 800px;
+			display: grid;
+			grid-template-columns: 20% 80%;
+		}
+		#left_main {
+			height: 100%;
+			background-color: gray;
+			margin-right: 10px;
+			float: left; 
+		}
+		#right_main {
+			height: 100%;
+			background-color: pink; 
+			float: left; 
+		}
+		#both {
+			clear:both;
+			clear:both;
+		}
+		#footer {
+			height:150px;
+			margin-top: 10px;
+			background: black;
+			padding: 20px;
+		}
+		h2 {
+		    margin: auto;
+		}
+		.topMenu{
+			align-content: left;
+			padding: 20px;
+		}
+		.sideMenu{
+			background-color: white;
+			margin: 10px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<div id="header">
+		 <h2>UNA's HOME</h2>
+		 <div class="topMenu"> HOME | 
+		 <a> MENU1</a> | <a> MENU2</a> | <a> MENU3</a> |
+		  </div>
+		</div>
+		<div id="main">
+			<div id="left_main">
+				<div class="sideMenu"> menu A </div>
+				<div class="sideMenu"> menu B </div>
+				<div class="sideMenu"> menu C </div>
+				<div class="sideMenu"> menu D </div>
+				
+			</div>
+			<div id="right_main">
+			
+				<form name="login-form" id="vbp-login-form" class="standard-form" action="https://codingapple.com/wp-login.php?redirect_to=https%3A%2F%2Fcodingapple.com%2Fregister%2F" method="post">
+						<div class="inside_login_form">
+							<a id="close_full_popup"></a>
+							<div class="inside">
+								<h3>로그인</h3>
+													<input type="text" name="log" id="side-user-login" placeholder="아이디" class="input" tabindex="1" value="" />
+								<input type="password" tabindex="2" name="pwd" id="sidebar-user-pass" class="input" value="" placeholder="비밀번호" />
+								<a href="https://codingapple.com/wp-login.php?action=lostpassword" tabindex="5" class="tip vbpforgot" title="비밀번호 분실했어요">비밀번호 분실했어요</a>
+							    <div class="checkbox small">
+							    	<input type="checkbox" name="sidebar-rememberme" id="sidebar-rememberme" value="forever" /><label for="sidebar-rememberme">날 기억해줘!</label>
+							    </div>
+						
+						<a class="back_to_login small">&lsaquo; 로그인 화면으로</a>
+						<form method="post">
+							<input type="email" placeholder="가입시 입력한 이메일을 입력해주세요." class="form_field" value="" />
+							<button id="vbp_forgot_password" class="button" data-security="6930af2478">패스워드 재설정 이메일 받기</button>
+				
+			</div>
+			</div>
+			</form>
+			</div>
+		</div>
+		<div id="both"> </div>
+		<div id="footer"> </div>
+	</div>
+</body>
+</html>

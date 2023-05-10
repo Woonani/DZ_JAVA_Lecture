@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.floating-box {
+		width: 150px;
+		height: 80px;
+		margin: 10px;
+		border: 3px dotted red;
+	}
+	.after-box {
+	 border: 3px solid blue;
+	 background-color: gold;
+	}
+</style>
+</head>
+<body>
+
+</body>
+</html>

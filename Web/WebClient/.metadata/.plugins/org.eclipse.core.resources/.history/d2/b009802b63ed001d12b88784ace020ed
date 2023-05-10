@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+		/* css 주석처리 
+		css, Script  >>  선택자 (selector)
+		
+		가상 선택자 : 의미만 존재 >> :link, :visited, :hover, :active
+		
+		*/
+		a:link { color:red; }
+		a:visited {color : skyblue; }
+		a:hover {color : gold;}
+		a:active {color : blue;}
+	
+	</style>
+</head>
+<body>
+	<a href="http://president.go.kr">방문하기</a>
+	<a href="http://naver.com">방문하기</a>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>우나사이트</title>
+
+	<style type="text/css">
+		#wrap {
+			width: 100%;
+			margin : auto;
+		}
+		#header {
+			height:100px;
+			background: LightGray;
+			text-align: center;
+			padding: 20px;
+		}
+		#main {
+			margin-top: 10px;
+			height: 800px;
+			display: grid;
+			grid-template-columns: 20% 80%;
+		}
+		#left_main {
+			height: 100%;
+			background-color: gray;
+			margin-right: 10px;
+			float: left; 
+		}
+		#right_main {
+			height: 100%;
+			background-color: pink; 
+			float: left; 
+		}
+		#both {
+			clear:both;
+		}
+		#footer {
+			height:150px;
+			margin-top: 10px;
+			background: black;
+			padding: 20px;
+		}
+		h2 {
+		    margin: auto;
+		}
+		.topMenu{
+			align-content: left;
+			padding: 20px;
+		}
+		.sideMenu{
+			background-color: white;
+			margin: 10px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<div id="header">
+		 <h2>UNA's HOME</h2>
+		 <div class="topMenu"> HOME | 
+		 <a> MENU1</a> | <a> MENU2</a> | <a> MENU3</a> |
+		  </div>
+		</div>
+		<div id="main">
+			<div id="left_main">
+				<div class="sideMenu"> menu A </div>
+				<div class="sideMenu"> menu A </div>
+				<div class="sideMenu"> menu A </div>
+				<div class="sideMenu"> menu A </div>
+				
+			</div>
+			<div id="right_main">
+				<form action="">
+					
+				
+				</form>
+				
+			</div>
+		</div>
+		<div id="both"> </div>
+		<div id="footer"> </div>
+	</div>
+</body>
+</html>

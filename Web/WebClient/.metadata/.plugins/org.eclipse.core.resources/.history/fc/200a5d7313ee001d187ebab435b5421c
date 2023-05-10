@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<input list="browsers" name="browser"> <!--input 태그에 list 속성에 datalist id속성값 명시-->
+ 	<datalist id="browsers">
+    	<option value="Internet Explorer">
+    	<option value="Firefox">
+	    <option value="Chrome">
+	    <option value="Opera">
+	    <option value="Safari">
+	  </datalist>
+	  <hr>
+	  <label for="favcolor">Select your favorite color:</label>
+	  <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+	  <input type="submit" value="Submit">
+	  <hr>
+	  <label for="birthday">Birthday:</label>
+	  <input type="date" id="birthday" name="birthday">
+	  
+	  
+	  
+</body>
+</html>
