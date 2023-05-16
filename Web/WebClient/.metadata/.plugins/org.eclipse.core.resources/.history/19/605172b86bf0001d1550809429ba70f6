@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	
+</head>
+<body>
+	<ul id="mylsit"><li>coffee</li><li>tea</li><li>milk</li></ul>
+	<button onclick=" myFunc()">click1</button>
+	<button onclick="">click2</button>
+</body>
+<script type="text/javascript">
+	function myFunc(){
+		let list = document.getElementById("mylist");
+		console.log(list);
+		list.removeChild(list.childNodes[0]);
+		// <ul> li, li, li 내부적ㅇ로 배열
+		// select > option, option, ....
+		
+	}	
+</script>
+</html>

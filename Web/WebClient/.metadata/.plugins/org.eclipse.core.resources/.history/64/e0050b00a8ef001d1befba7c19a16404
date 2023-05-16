@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>우편번호 검색</title>
+	<style type="text/css">
+		table,tr,th,td{
+			border: 1px solid blue;
+			border-collapse: collapse;
+		}
+	</style>
+</head>
+<body>
+	<form action="" name="mainform">
+		<table style="width: 500px">
+			<tr>
+				<th>우편번호</th>
+				<td>
+					<input type="text" name="zipcode" readonly>
+					<input type="button" value="우편번호검색" 
+					       onclick="window.open('Ex13_popup.html','zip','width=500, height=500')">
+				</td>
+			</tr>
+			<tr>
+				<th>주소</th>
+				<td>
+					<input type="text" size="50px" name="addr">
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
+<form>
+		<fieldset>
+			<legend>주문정보</legend>
+			이름:<input type="text" name="username"><br> 
+			    <input type="checkbox" name="checkmail">배송정보 Email수신<br>
+			<hr>
+			<input type="checkbox" name="copy" onclick="copySend(this.form)">
+			주문자 정보와 배송지 정보 동일
+		</fieldset>
+		<hr>
+		<fieldset>
+			<legend>배송지 정보</legend>
+			이름:<input type="text" name="copyname"><br> 
+			       <input type="checkbox" name="copymail">배송정보 Email수신<br>
+		</fieldset>
+	</form>
+모델별 최저가 검색
+	<br>
+	<form name="frmdata">
+		<select style="width: 200px" name="productor" onchange="eventProductor(this.form)">
+			<option value="A000" selected>제조사</option>
+			<!-- select[0]  -->
+			<option value="A001">삼성전자</option>
+			<option value="A002">LG전자</option>
+			<option value="A003">Apple</option>
+			<option value="A004">Dell</option>
+		</select> 
+			<input type="text" name="valProductor" size="10"> 
+			<input type="text" name="txtProductor" size="10"> <br>
+	</form>

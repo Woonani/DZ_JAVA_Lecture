@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+		div1{
+			width: 100%;
+			height: 100px;
+			background-color: yellow;
+		}
+	</style>
+	<script type="text/javascript">
+		
+	</script>
+</head>
+<body>
+	<div id="div1">ㅎ</div>
+	<div id="div2"> ㅎ<div></div> <div></div> <div></div> <div></div> <div></div> <div></div> </div>
+	<div id="div3"> ㅎ<div></div> <div></div> </div>
+	<div id="div4">ㅎ</div>
+	
+</body>
+</html>
+
+

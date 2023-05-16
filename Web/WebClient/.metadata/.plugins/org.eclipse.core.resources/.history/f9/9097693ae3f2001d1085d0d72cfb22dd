@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+	
+	/* 
+	https://www.w3schools.com/jsref/obj_event.asp
+	
+	JAVA)
+	예외처리
+	try{
+		0/0 >> 예외 발생 
+	}catch(Exception e){
+		
+	}
+	
+	*/
+	</script>
+</head>
+<body>
+
+</body>
+</html>

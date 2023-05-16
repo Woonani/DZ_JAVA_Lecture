@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		// JavaScript Object Notation 자바스크립트 객체 표기법
+	/* 
+	Javascript 객체지향언어
+	xml 
+		장점 : os에 상관없이 이기종간 데이터를 주고받을 수 있는 형식의 문서
+		특징 : 텍스트 기반의 형식화 문서 xml 웹문서
+		단점 : 문번이 방대
+	대안 JSON
+	xml보다 문법체계가 쉽고 가볍고 빠르다.
+	지금은 이기종간의 데이터 교환은 JSON으로 함.
+	
+	*/
+	/* 
+	Javascript 객체지향언어
+	JSON(자바스크립트 객체 표기법)	
+	*/
+	
+	let Member = {};
+	Member.name="hong"; // {name : "hong"} 프로퍼티(속성):벨류(값)
+	console.log(Member);
+	console.log(Member.name);
+	
+	Member.age = 100;
+	console.log(Member);
+	console.log(Member.age);
+	
+	//함수추가
+	Member.print = function(){
+		document.write("<br>" + this.name +"/" + this.age + "<br>")		
+	}
+	
+	Member.print();
+	
+	// JSON 객체 만들기
+	let Grade = {
+			"list" : {"hong":10, "kim":20, "park":30},			
+			"show" : function(){
+				for(let key in this.list){
+					document.write(key + ":" + this.list[key] + "<br>");
+				}
+			}		
+	};
+	
+	Grade.show();
+	
+	
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		function zipSearch(obj){
+			console.log(obj);
+		}
+	</script>
+</head>
+<body>
+	<h3>DB연결 검색한 결과 출력된 화면(선택)</h3>
+	<form action="" name="zipform">
+		<input type="button" value="200-300 서울시 강남구 역삼동" name="btn" onclick="zipSearch(this.value)"><br>
+		<input type="button" value="200-400 경기도 성남시 삼평동" name="btn" onclick="zipSearch(this.value)"><br>
+		<input type="button" value="300-500 제주시 서귀포동"     name="btn" onclick="zipSearch(this.value)"><br>	
+	</form>
+</body>
+</html>

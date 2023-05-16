@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+		table{width: 100%}
+		table,tr,th,td {border: 1px solid; border-collapse: collapse;}
+		td{background-color: gold; text-align: center;}
+	</style>
+	<script type="text/javascript">
+		// 동적 테이블 생성 이벤트 걸기
+		window.onload= function () { 
+			document.getElementById("b1").onclick = function () {
+				let table = document.createElement("table");
+				let tableTr = document.createElement("tr");
+				let tableTd = document.createElement("td").value;
+				let rows = document.getElementById("txtrow").value;
+				let columns = document.getElementById("txtcolumn");
+				console.log(rows, "ㅎㅎ", columns);
+				/* for(let i = 0; i<)
+				table.setAttribute("type","text");
+				table.setAttribute("id", "txtbox");
+				txtmsg.setAttribute("value", "홍길동");
+				document.body.table.appendChild(tableTr); */
+			}		
+		
+		}	
+	</script>
+</head>
+<body>
+	<div id="div">
+		행의수 : <input type="text" id="txtrow" name="txtrow" value="2"><br>
+		열의수 : <input type="text" id="txtcolumn" name="txtcolumn" value="2"><br>
+		<input type="button" id="b1"  value="동적테이블 생성" >
+		<input type="button" id="b2"  value="동적테이블 제거" >
+	</div>
+</body>
+</html>

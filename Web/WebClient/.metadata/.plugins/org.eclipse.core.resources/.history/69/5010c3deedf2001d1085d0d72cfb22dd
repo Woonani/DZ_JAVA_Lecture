@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	 <style>
+        #add-btn{
+            padding: 5px 10px;
+            border: 0;
+            background: #f80; 
+            color: white;
+            border-radius: 5px;
+        }
+        ul{ 
+            padding: 0; 
+            list-style-position: inside;
+        }
+        li{
+            border-bottom: 1px solid #999;
+            padding: 5px 0;
+        }
+        .active{ background:gold; } /* step3: 목록 클릭 스타일 */
+    </style>
+</head>
+<body>
+	<h1 id='title'>할일 목록</h1>
+    <button id="add-btn">목록 추가</button>
+    <ul id='list'>
+        <li>제목 1</li>
+        <li>제목 2</li>
+        <li>제목 3</li>
+        <li>제목 4</li>
+    </ul>
+</body>
+<script type="text/javascript">
+	let title = document.getElementById("title");
+	let list = document.getElementById("list");
+	let li = document.getElementsByTagName("li");
+	let addbtn = document.getElementById("add-btn");
+	console.log(title);
+	console.log(list);
+	console.log(li);
+	console.log(addbtn);
+	
+	function activeItem(event){ // 이벤트 객체를 받아서
+		console.log(event.target); // 각각의 Li
+		console.log(event.currentTarget); // ul
+		// 간단하게 설명하면 target은 이벤트가 발생한 바로 그 요소를 직접 가리키고
+		// currentTarget은 이벤트 리스너 (EventListener)를 가진 요소를 가리킵니다.
+		if(event.target.nodeName == 'LI'){
+			title.innerHTML = event.target.innerText;
+		}
+		//class 제거
+		// 모든 요소
+		for(let i = 0; i < event.target.parentNode.children.length; i++){
+			event.target.parentNode.children[i].removeAttribute('class', activeItem);
+		}
+	}
+	
+	list.addEventListener("click", activeItem)
+	
+</script>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		let checkflag = "false"; // global 변수
+		
+		function checkForm(){
+			let list = document.myform.list;
+			console.log(list);
+			console.log(list.length);
+			
+			if(checkflag == "false"){
+				for(let index in list) { //point
+					console.log(list[index]);
+					list[index].checked = true; // <input type=""
+				}
+				checkflag = "true";
+				return "[선택해제하기]";
+			}else{
+				for(let index in list) { //point
+					console.log(list[index]);
+					list[index].checked = false; // <input type=""
+				}
+				checkflag = "false";
+				return "[전체선텍하기]";
+			}
+		}
+	</script>
+</head>
+<body>
+	<form action="" name="myform">
+		좋아하는 과목은 : <br> 
+		<!-- name이 같으면 배열로 봐라 -->
+		<input type="checkbox" name="list" value="java" >JAVA<br> <!-- checked="checked" 또는 checked="true" -->
+		<input type="checkbox" name="list" value="oracle">ORACLE<br>
+		<input type="checkbox" name="list" value="html">HTML<br>
+		<input type="checkbox" name="list" value="css">CSS<br> 
+		<input type="checkbox" name="list" value="script">SCRIPT<br> 
+		<input type="button" value="[전체선택] " onclick="this.value = checkForm()"><br>
+		<br> <input type="button" value="[전체선택]" 	onclick=""><br>
+	</form>
+</body>
+</html>

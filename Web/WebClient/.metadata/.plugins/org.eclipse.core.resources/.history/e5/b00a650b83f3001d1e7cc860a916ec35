@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		// javascript 비교하자면 java에 collection 동일
+		
+		let array = ['포도', '사과'];
+		console.log(array.toString()); // 재정의..
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>

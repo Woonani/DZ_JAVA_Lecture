@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		// javascript 비교하자면 java에 collection 동일
+		
+		let array = ['포도', '사과'];
+		console.log(array.toString()); // 재정의.. 포도, 사과
+		console.log(array + "-default toString() 생략"); 
+		
+		for(let i =0; i < array.length; i++){
+			console.log(array[i]);
+		}
+		
+		for(let index in array){
+			console.log(array[index]);
+		}
+		
+		for(let value of array) {
+			console.log(value);
+		}
+		
+		//['포도', '사과'] > [0][1]
+		// 동적
+		array[2] = "바나나";
+		console.log(array.toString() + " / " + array.length); //포도,사과,바나나 / 3
+		
+		//['포도', '사과', '바나나']
+		// 권장하지 않아요 array[2] >> 권장 push
+		array[10] = "애플망고"; //bad 한 코드
+		console.log(array.toString() + " / " + array.length); //포도,사과,바나나,,,,,,,,애플망고 / 11
+		
+		console.log(array[9] + " >> array[9]");
+		array[9] = "배";
+		
+		let array2 = ["one", "two", "three"];
+		array2.length = 2; // 권장하지 않아요
+		console.log(array2 + "---" + array2.length);
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		let str = "10+20+30";
+		document.write(str + "<br>");
+		
+		// 1. eval()
+		// 문자열 수식 >> 계산식으로 > "10+20+30" >> eval() >> 10+20+30 >> 계산
+	</script>
+</head>
+<body>
+
+</body>
+</html>

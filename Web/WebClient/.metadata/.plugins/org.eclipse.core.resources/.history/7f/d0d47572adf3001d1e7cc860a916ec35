@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		// 1. 배열 >> [] >> let arr =[] >> push(), pop() >> LIFO
+		// 2. JSON >> {} >> let obj ={} >> opj.속성명 , obj.함수명 , obj[key]
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>

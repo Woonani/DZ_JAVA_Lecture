@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+		.contents {
+			display: grid;
+			width: 100vw;
+			height: 100vh;
+			grid-template-rows: 20% 100px 300px 20%;
+		}
+		.contents-1 {
+			background-color: yellow;
+		}
+		.contents-2 {
+			background-color: tomato;
+			padding: 3px;
+			display: grid;
+			grid-template-columns: repeat(6, 1fr);
+		
+		}
+		.contents-3 {
+			background-color: bisque;
+		}
+		.contents-4 {
+			background-color: yellow;
+		}
+		.contents-2 div {
+			margin: 3px;
+			background-color: aquamarine;
+		}
+		.con.con2
+		/*
+		1 ) vw, vh 는 해상도에 맞게 꽉찬 화면 제공
+		2 ) 상속의 > 는 생략가능
+		3 ) flex 공부하기
+		4 ) class를 여러개 선언할 수 있다. ex) class="con con2"
+			이때 css에 .con.con2라고 하면 "con"과 "con con2"중 후자만 잡는다.
+		 */
+		
+	</style>
+</head>
+<body>
+	<div class="contents">
+
+		<div class="contents-1">1</div>
+		<div  class="contents-2">
+			<div>r</div> <div>r</div> <div>r</div> <div>r</div> <div>r</div> <div>r</div> 
+		</div>
+		<div class="contents-3"> 3<div></div> <div></div> </div>
+		<div class="contents-4">4</div>
+		<div class="con con2"></div>
+		<div class="con"></div>
+	</div>
+</body>
+</html>
+
+

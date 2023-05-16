@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		//while
+		let i = 1;
+		let sum = 0;
+		while( i<= 10 ){
+			// 명시적인 증가감
+			sum += i;
+			i++;
+			
+		}
+		console.log("sum : " + sum);
+		console.log("i : " + i);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

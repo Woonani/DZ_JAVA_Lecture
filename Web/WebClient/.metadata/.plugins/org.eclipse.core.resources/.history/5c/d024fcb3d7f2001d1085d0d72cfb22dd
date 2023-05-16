@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>이벤트 처리시 주의사항</title>
+	<script type="text/javascript">
+			let i =0;
+		function displayData(){
+			console.log("call" + i++);			
+			document.getElementById("demo").innerHTML = new Date();
+		}
+		
+		// 1. 실행순서 에러남 .. (body안의 요소가 loading 되고 나서 ...)
+		//Uncaught TypeError: Cannot set properties of null (setting 'onclick') at Ex27_DOM.html:14:45
+		// document.getElementById('mybtn').onclick = displayData();
+		
+		// 3. onload : DOM구조가 다 로딩 된 후 함수를 호출하도록 
+		/* window.onload = function() {
+			document.getElementById('mybtn').onclick = displayData;
+		}  */
+	</script>
+</head>
+<body>
+	<button id="mybtn">눌러봐</button>
+	<br>
+	<button id="mybtn2" onclick=displayData()>눌러봐2</button>
+	<br>
+	<p id="demo"></p>
+</body>
+
+<script type="text/javascript">
+	// 2.1 body태그 아래에 script태그 : DOM구조가 다 로딩 된 후 함수를 호출하도록 
+	// document.getElementById('mybtn').onclick = displayData();
+	// 버튼을 클릭하기 전에 호출해버림. displayData(); 호출해요 ... >> 자스는 함수가 displayData();이렇게 있음 실행함. 괄호있음.. 실행..
+	
+	//***중요!!
+	document.getElementById('mybtn').onclick = displayData; // POINT 괄호 x : 이벤트에 함수를 줄때에는 괄호를 쓰지 않습니다!! 
+	
+</script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		function eventProductor(frm){
+			console.log(frm);
+			console.log(frm.productor.value); // 선택된 option 태그의 value값
+		    console.log(frm.productor.text); // undefined
+		    // select > 여러개의 option >> option 배열 ... 
+		    console.log("index : " + frm.productor.selectedIndex); // .selectedIndex : 주어진 속성 selected 배열 안에 인덱스값은 내보냄
+			
+		}
+	</script>
+</head>
+<body>
+	<br>
+	<form name="frmdata">
+		<select style="width: 200px" name="productor" onchange="eventProductor(this.form)">
+			<option value="A000" selected>제조사</option>
+			<!-- select[0]  -->
+			<option value="A001">삼성전자</option>
+			<option value="A002">LG전자</option>
+			<option value="A003">Apple</option>
+			<option value="A004">Dell</option>
+		</select> 
+			<input type="text" name="valProductor" size="10"> 
+			<input type="text" name="txtProductor" size="10"> <br>
+	</form>
+</body>
+</html>

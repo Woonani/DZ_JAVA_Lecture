@@ -1,3 +1,5 @@
 INDEX VERSION 1.131
+C:\Douzone\Web\WebClient\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\144024886.index
+\WebScript\src\main\java
 C:\Douzone\Web\WebClient\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3900968690.index
 \WebClient\src\main\java

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+	
+	/* 
+	https://www.w3schools.com/jsref/obj_event.asp
+	
+	JAVA) 아래 e를 이해하면 자바스크립트의 이벤트를 이해하기 쉬워짐!
+	예외처리
+	try{
+		0/0 >> 예외 발생 >> 예외에 맞는 [객체가 자동 생성] new Div ... >> 객체 예외 메시지 정보 담겨서
+	}catch(Exception e){  // e라는 생성된 예외 객체의 주소를 받는다
+		예외에 정보를 확인 .....
+	}
+	
+	*/
+	</script>
+</head>
+<body>
+
+</body>
+</html>

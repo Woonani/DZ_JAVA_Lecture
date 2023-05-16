@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		//while
+		let i = 1;
+		let sum = 0;
+		while( i<= 10 ){
+			// 명시적인 증가감
+			sum += i;
+			i++;
+			
+		}
+		console.log("sum : " + sum);
+		console.log("i : " + i);
+		
+		let sum2 = 0;
+		for(let j = 0; j <= 10; j++){
+			if(j%3 == 0){
+				console.log("j : " + j);
+				continue;
+			}
+			console.log("for j : " + j);
+			sum2 += j;
+		}
+		console.log("sum2 : " + sum2);
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

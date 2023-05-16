@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+			let a = false;
+		function copySend(frm){
+			a = !a
+			if(a == true){
+				frm.copyname.value = frm.username.value;
+				if(frm.checkmail.value = true){
+					frm.copymail.checked = true;
+				}else{
+					frm.copymail.checked = false;				
+				}
+			}else{
+				frm.copyname.value = "";
+				frm.copymail.checked = false;				
+				
+			}
+				
+		}
+	</script>
+</head>
+<body>
+	<form action="" name="myform">
+		좋아하는 과목은 : <br> 
+		<input type="checkbox" name="list" value="java">JAVA<br>
+		<input type="checkbox" name="list" value="oracle">ORACLE<br>
+		<input type="checkbox" name="list" value="html">HTML<br>
+		<input type="checkbox" name="list" value="css">CSS<br> 
+		<input type="checkbox" name="list" value="script">SCRIPT<br> 
+		<input type="button" value="[전체선택] " onclick=""><br>
+		<br> <input type="button" value="[전체선택]" 	onclick=""><br>
+	</form>
+	<hr>
+	<form>
+		<fieldset>
+			<legend>주문정보</legend>
+			이름: <input type="text" name="username"><br> 
+			    <input type="checkbox" name="checkmail">배송정보 Email수신<br>
+			<hr>
+			<input type="checkbox" name="copy" onclick="copySend(this.form)">
+			주문자 정보와 배송지 정보 동일
+		</fieldset>
+		
+		<hr>
+		
+		<fieldset>
+			<legend>배송지 정보</legend>
+			이름:<input type="text" name="copyname"><br> 
+			       <input type="checkbox" name="copymail">배송정보 Email수신<br>
+		</fieldset>
+		
+	</form>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		/* 
+		javascript 다양한 내장 객체 제공 : 사용방법 2가지 91. new 통해서 , 2. 이미생성된 객체 (그냥 사용0)
+		*/
+		let today = new Date();
+		console.log(today);
+		console.log(today.getFullYear());
+		console.log(today.getMonth);
+		console.log(today.getDate());
+		console.log(today.getHours);
+		console.log(today.getMinutes);
+		console.log(today.getSeconds());
+	</script>
+</head>
+<body>
+
+</body>
+</html>

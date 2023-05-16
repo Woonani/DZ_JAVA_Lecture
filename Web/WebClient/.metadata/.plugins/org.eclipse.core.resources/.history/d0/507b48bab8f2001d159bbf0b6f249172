@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+		.democlass {color:red;}
+	</style>
+</head>
+<body>
+	<div id="div">
+		<h1 class="democlass">Hello World_1</h1>
+		<h1 class="democlass">Hello World_2</h1>
+		<h1 class="democlass">Hello World_3</h1>
+	</div>
+
+</body>
+<script type="text/javascript">
+	// document.getElementsByTagName("h1")[0].removeAttribute('class');
+	/* 
+	let harray = document.getElementsByTagName("h1");
+	console.log(harray);
+	for(let i = 0; i < harray.length ; i++){
+		console.log(harray.length);
+		harray[i].removeAttribute("class");
+	}
+	 */
+	 
+	let harray = document.getElementsByTagName("h1");
+	for(let index in harray){
+		console.log(harray[index]);
+		console.log("index : " + index + "-length : " + harray[index]);
+		//document.getElementById("div") // div의 자식요소도 가져옴
+		document.getElementById("div").removeChild(harray[index]);
+	} 
+	/* 
+	삭제순서 : 0 -> 1 -> 2
+	Hello World_2 남아있네
+		  [0]             [1]             [2]
+	[Hello World_1] [Hello World_2] [Hello World_3]
+	
+	삭제 [0] 동적배열
+	       [0]             [1]
+	 [Hello World_2] [Hello World_3]	>> for(let index in harr)  >>  index >> 1
+	
+	삭제 [1] 동적배열
+	       [0]      
+	 [Hello World_2] 	>> for(let index in harr)  >>  index >> 2
+	
+	
+	
+	*/
+</script>
+</html>

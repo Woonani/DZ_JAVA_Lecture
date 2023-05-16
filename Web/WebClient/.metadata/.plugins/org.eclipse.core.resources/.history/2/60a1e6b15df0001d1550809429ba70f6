@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<br>
+	<form name="frmdata">
+		<select style="width: 200px" name="productor" onchange="eventProductor(this.form)">
+			<option value="A000" selected>제조사</option>
+			<!-- select[0]  -->
+			<option value="A001">삼성전자</option>
+			<option value="A002">LG전자</option>
+			<option value="A003">Apple</option>
+			<option value="A004">Dell</option>
+		</select> 
+			<input type="text" name="valProductor" size="10"> 
+			<input type="text" name="txtProductor" size="10"> <br>
+	</form>
+</body>
+</html>

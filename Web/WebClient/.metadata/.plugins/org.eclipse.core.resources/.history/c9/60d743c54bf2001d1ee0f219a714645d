@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	
+	<link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link href="/your-path-to-fontawesome/css/custom-icons.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+	
+	<style type="text/css">
+	body {
+		overflow:scroll;
+		margin-bottom: 300px;
+	}
+	.contents-1  {
+		margin: 30px;
+		clear: both;
+	}
+	/* li {
+		display: inline;
+	} */
+	.function-box {
+		 background-color: rgba(145, 186, 255, 0.3);
+		 border-radius: 10px;
+		 float: left;
+		 height : 300px;
+		 margin: 25px;
+		 padding: 35px;
+		 text-align: center;
+		 width: 400px;
+	}
+	.function-box button {
+		 background-color: rgba(255, 255, 255, 0.7);
+		 border-radius: 10px;
+		 text-align: center;
+	}
+	
+	.contents-main button { /* 부모클래스 contents-main 밑에 있는 자식 태그 button만 적용 (nav의 햄버거 버튼때문에!) */
+	  width: 100%;
+	}
+	</style>
+
+</head>
+<body>
+
+	 <!-- Navbar -->
+	<nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #3B71CA; ">
+	    <!-- Container wrapper -->
+	    <div class="container-fluid">
+	        <!-- Navbar brand -->
+	        <a class="navbar-brand mt-2 mt-lg-0" href="#">
+	            <h5 class="pt-1">TEAM5</h5>
+	        </a>
+	        
+	        
+	        <!-- Toggle button -->
+	        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="float:right;">
+	            <i class="bi bi-list"></i>
+	        </button>
+	
+	        <!-- Collapsible wrapper -->
+	        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	            <!-- Left links -->
+	            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+	                <li class="nav-item">
+	                    <a class="nav-link" href="/webapp/Intro.html">Intro</a>
+	                </li>
+	                <li class="nav-item">
+	                    <a class="nav-link" href="#">Member</a>
+	                </li>
+	                <li class="nav-item">
+	                    <a class="nav-link" href="#">Function</a>
+	                </li>
+	            </ul>
+	            <!-- Left links -->
+	          
+	        </div>
+	        <!-- Collapsible wrapper -->
+	    </div>
+	    <!-- Container wrapper -->
+	</nav>
+	<!-- Navbar End -->
+	
+	
+	<!-- contents -->
+	<div class="contents-main" >
+	
+		<div class="contents-1">
+			<h1>#1 </h1>
+			<div class="function-box" id="imgbox1">Function 1<br>
+				<h1>HTML Geolocation Example</h1>
+				<button onclick="getLocation()">Get Location</button>
+				<p id="demo"></p>
+				
+				  <img src="images/img_5terre.jpg" alt="Italy" style="width:100%">
+				<button onclick="removeElement()">Geolocation</button>
+			</div>
+			
+			<div class="function-box" id="imgbox2">Function 2<br>
+				<h1>HTML Drag/Drop Example</h1>
+				<div id="dragdiv" draggable="true" ondragstart="drag(event)">Drag Me!</div>
+				<div id="dropdiv" ondrop="drop(event)" ondragover="allowDrop(event)">Drop Here!</div>
+				
+				  <img src="images/img_lights.jpg" alt="Lights" style="width:100%">
+				<button onclick="changeVisibility()">HTML Drag/Drop</button>
+			</div>
+			
+			<div class="function-box">Function 3<br>
+				<h1>HTML Local Storage Example</h1>
+				<p>Enter your name:</p>
+				<input type="text" id="name">
+				<button onclick="saveName()">Save</button>
+				<p>Your name is: <span id="savedName"></span></p>
+				
+				  <img src="images/img_forest.jpg" alt="Forest" style="width:100%">
+				<button onclick="resetElement()">HTML Local Storage</button>
+			</div>
+		</div>
+		
+		<!-- spacer -->
+		<div  class="contents-1">
+			<br><br><hr><br><br>
+		</div>
+
+		<div class="contents-1">
+			<h1>#2</h1>
+			 hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi hi
+	
+		</div>
+	
+	</div>
+	
+	
+	<!-- contents End -->
+	
+	
+	
+	
+	
+	
+	
+	<!-- Footer -->
+
+	<footer class=" text-center text-white fixed-bottom "  style="background-color: #3B71CA; ">
+	    <!-- Grid container -->
+	    <div class="container p-4 pb-0" style="height: 80px">
+	        <!-- Section: Social media -->
+	        <section class="mb-4">
+	            <!-- member -->
+	            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="bi bi-dice-1"></i></a>
+	            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="bi bi-dice-2"></i></a>
+	            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="bi bi-dice-3"></i></a>
+	            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="bi bi-dice-4"></i></a>
+	
+	            <!-- notion -->
+	            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="bi bi-google"></i></a>
+	
+	            <!-- Github -->
+	            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="bi bi-github"></i></a>
+	        </section>
+	        <!-- Section: Social media End -->
+	    </div>
+	    <!-- Grid container End -->
+	
+	    <!-- Copyright -->
+	    <div class="text-center p-3" style="background-color: #3B71CA;" >
+	        ©더존5기5조:
+	        <a class="text-white" href="https://www.notion.so/5-5-70506e4b0e75428aa4d4db955709678e?pvs=4">team5notion.com</a>
+	    </div>
+	    <!-- Copyright End -->
+	</footer>
+	<!-- Footer -->
+ 
+</body>
+<script type="text/javascript">
+	//HTML Geolocation
+	function getLocation() {
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(showPosition);
+		} else {
+			alert("Geolocation is not supported by this browser.");
+		}
+	}
+	
+	function showPosition(position) {
+		var latitude = position.coords.latitude;
+		var longitude = position.coords.longitude;
+		document.getElementById("demo").innerHTML = "Latitude: " + latitude + "<br>Longitude: " + longitude;
+	}
+	
+	// HTML Drag/Drop
+	function allowDrop(ev) {
+		ev.preventDefault();
+	}
+	
+	function drag(ev) {
+		ev.dataTransfer.setData("text", ev.target.id);
+	}
+	
+	function drop(ev) {
+		ev.preventDefault();
+		var data = ev.dataTransfer.getData("text");
+		ev.target.appendChild(document.getElementById(data));
+	}
+	
+	// HTML Local Storage
+	function saveName() {
+		var name = document.getElementById("name").value;
+		localStorage.setItem("name", name);
+		document.getElementById("savedName").innerHTML = name;
+	}
+	
+	var savedName = localStorage.getItem("name");
+	if (savedName) {
+		document.getElementById("savedName").innerHTML = savedName;
+	}
+</script>
+</html>

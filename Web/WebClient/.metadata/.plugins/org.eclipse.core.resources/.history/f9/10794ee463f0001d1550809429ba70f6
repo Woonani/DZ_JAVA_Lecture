@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		//while
+		let i = 1;
+		let sum = 0;
+		while( i<= 10 ){
+			// 명시적인 증가감
+			sum += i;
+			i++;
+			
+		}
+		console.log("sum : " + sum);
+		console.log("i : " + i);
+		
+		let sum2 = 0;
+		for(let j = 0; j <= 10; j++){
+			if(j%3 == 0){
+				console.log("j : " + j);
+				continue;
+			}
+			console.log("for j : " + j);
+			sum2 += j;
+		}
+		console.log("sum2 : " + sum2);
+		
+		//배열 (Array) > 배열의 크기 고정 , 동적(Collection) > 다양한 class
+		/* 
+		JAVA : 정적(Array) > 배열의 크기 고정 , 동적 (Collection) > 다양한 class
+		int[] arr = new int[3];
+		int[] arr = new int[]{1,2,3};
+		int[] arr = {11,22,33}; key point
+		
+		List<String> list = new ArrayList<>();
+		list.add("A");
+		list.add("B");
+		
+		javaScript >> 정적+동적 >> 동적(Array)
+		선언방법
+		let arr = []; // best 코드    // stack 자료구조
+		arr.push();  
+		arr.pop();  
+		
+		 */
+		 
+		 let arr = [10, 20, 30];
+		 for(let i = 0; i < arr.length; i++){
+			 document.write(arr[i] + "<br>");
+		 }
+		 
+		 //BEST
+		 // let arr = [];
+		 
+		 // Bad
+		  let eng = new Array(3); // 방만 있고 값이 없음. 초기값이 없음.
+		 for(let i = 0; i< eng.length ; i ++ ){
+			 document.write(eng[i] + "<br>");
+		 }
+		 
+		 
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

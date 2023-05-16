@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+	
+	/* 
+	https://www.w3schools.com/jsref/obj_event.asp
+	
+	JAVA) 아래 e를 이해하면 자바스크립트의 이벤트를 이해하기 쉬워짐!
+	예외처리
+	try{
+		0/0 >> 예외 발생 >> 예외에 맞는 [객체가 자동 생성] new Div ... >> 객체 예외 메시지 정보 담겨서
+	}catch(Exception e){  // e라는 생성된 예외 객체의 주소를 받는다
+		예외에 정보를 확인 .....
+	}
+	
+	JavaScript >> 사건이 발생 ( click , mouseover, mouseout ) >> 내부적으로  event 정보를 담고있는 객체 생성 ^^^^
+	Event 객체라 녀석은 >> 사건의 진실 >> (사건발생 , 주체, 영향 ...정보)
+	자동으로 생성된 event 객체의 주소를 받아서 쓰고 싶어요 ^^^^^^
+	
+	window.event.메서드    제공
+	window.event.속성     제공
+	
+	KEY POINT : Event 객체가 가지는 메서드 , 속성을 활용하기
+	
+	*/
+	
+	window.onload= function(){
+		let btn = document.getElementById("mybtn");
+		btn.onclick = function (e) {// e변수가 Event 객체의 주소값을 받는다.
+			console.log(e.type); // type은 Event객체가 가지는 속성 >> 어떤 이벤트가 발생했는지 >> 종류판단
+			// 클릭인지 더블클릭인지 마우스오버인지 등등
+			console.log(e.target); //<span> 눌러봐 </span>
+			console.log(e.currentTarget); // <button id= "mybtn"><span>눌러봐</span></button>
+			console.log(e.x); // 클릭된 좌표값
+			console.log(e.y);
+			// target은 이벤트가 발생한 그 요소를 직접 가리키고
+			// current Target은 이벤트 리스너(EventListener)를 가진 요소를 가리킨다.
+		}
+		
+		let btn2 = document.getElementById("mybtn2");
+		let handler = function (event) {
+			switch (event.type) {
+			case "click": alert("클릭");				
+				break;
+			case "mouseover" : event.target.style.backgroundColor="red"; // 응용
+				break;
+			case "mouseout" : event.target.style.backgroundColor=""; 
+				break;
+			}
+		}
+		
+		btn2.onclick = handler; // 함수의 주소
+		btn2.onmouseover = handler; // 함수의 주소
+		btn2.onmouseout = handler; // 함수의 주소
+		
+	}
+	
+	</script>
+</head>
+<body>
+	<button id="mybtn"> <span>눌러봐</span> </button>
+	<br>
+	<button id="mybtn2"> <span>눌러봐2</span> </button>
+	
+</body>
+</html>

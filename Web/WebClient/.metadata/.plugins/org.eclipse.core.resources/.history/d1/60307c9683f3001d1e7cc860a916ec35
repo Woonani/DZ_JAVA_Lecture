@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		// javascript 비교하자면 java에 collection 동일
+		
+		let array = ['포도', '사과'];
+		console.log(array.toString()); // 재정의.. 포도, 사과
+		console.log(array + "-default toString() 생략"); 
+		
+		for(let i =0; i < array.length; i++){
+			console.log(array[i]);
+		}
+		
+		for(let index in array){
+			console.log(array[index]);
+		}
+		
+		for(let value of array) {
+			console.log(value);
+		}
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>

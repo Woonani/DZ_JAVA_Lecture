@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		function zipSearch(obj){
+			console.log(obj);
+			// 200-300 서울시 강남구 역삼도
+			// 우편번호 와 주소분리해서 변수에 담고
+			let zipcode = obj.slice(0,8);
+			console.log(zipcode);
+			let addr = obj.slice(8);
+			console.log(addr);
+			
+			// 부모창 , 자식창
+			// 부모창 (Ex13_Script_Zipcode.html) >> open >> Ex13_popup.html(자식창)
+			// 부모와 자식
+			// 자식입장에 부모에 접근하는 방법
+			// 자식창 입장에서 부모창을 (객체로 보는데 객체이름이) : opener
+			// window.opener = Ex13_Script_Zipcode.html를 뜻함
+			window.opener.mainform.zipcode.value = zipcode;
+		    opener.mainform.addr.value = addr;
+		    
+		    //  현재창 닫기
+		    window.close(); // 현재창 닫기
+		}
+	</script>
+</head>
+<body>
+	<h3>DB연결 검색한 결과 출력된 화면(선택)</h3>
+	<form action="" name="zipform">
+		<input type="button" value="200-300 서울시 강남구 역삼동" name="btn" onclick="zipSearch(this.value)"><br>
+		<input type="button" value="200-400 경기도 성남시 삼평동" name="btn" onclick="zipSearch(this.value)"><br>
+		<input type="button" value="300-500 제주시 서귀포동"     name="btn" onclick="zipSearch(this.value)"><br>	
+	</form>
+</body>
+</html>
