@@ -5,7 +5,9 @@
   <button class="btn">Button</button>
   <script>
     const btn = document.querySelector('.btn');
-
+	
+    // 요약 : addEventListener의 콜백함수 안에서 사용한 this는 이벤트가 걸린 html "요소"를 가리킨다.
+    
     btn.addEventListener('click', function (e) {
       console.log(this); // <button id="btn">Button</button> : this는 이벤트가 걸린 요소를 가리킴.
       // this = 이벤트 객체 = e.currentTarget = <button class="btn">Button</button>

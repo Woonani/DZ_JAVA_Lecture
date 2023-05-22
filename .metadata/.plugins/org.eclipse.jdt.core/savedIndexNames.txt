@@ -1,6 +1,5 @@
 INDEX VERSION 1.131+C:\Users\KOSA\Desktop\DZ_JAVA_Lecture\.metadata\.plugins\org.eclipse.jdt.core
 2178195563.index
-3125200830.index
 628021410.index
 2019357363.index
 1575283362.index
@@ -9,15 +8,14 @@ INDEX VERSION 1.131+C:\Users\KOSA\Desktop\DZ_JAVA_Lecture\.metadata\.plugins\org
 1957691506.index
 681541635.index
 2744742364.index
-1865797976.index
 1269627254.index
+1865797976.index
 3598798956.index
 739051430.index
 3015768299.index
 1503732156.index
 2344469092.index
 2208026862.index
-344114697.index
 3890455277.index
 243429029.index
 1413266270.index

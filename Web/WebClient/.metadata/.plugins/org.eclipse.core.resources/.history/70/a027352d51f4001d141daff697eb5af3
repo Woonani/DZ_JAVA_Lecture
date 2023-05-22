@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>화살표 함수 (줄임표현식)</title>
+</head>
+<body>
+	<p id="demo"></p>
+	<p id="demo2"></p>
+</body>
+ <script type="text/javascript">
+		//https://www.w3schools.com/js/js_arrow_function.asp
+		//일반함수  function foo(){}
+		
+		//익명함수
+		let foo = function(){
+			console.log("foo .....");
+		}
+		//실행방법
+		foo();
+		
+		//ES6 (2015) 함수의 줄임 표현 ... Arrow Function 이름으로
+		let bar = () => console.log("bar ...");
+		bar();
+		
+		//매개변수 1개 return 함수
+		//let foo2 = function(x) {return x}
+		let foo2 = x => x;
+		let data = foo2(100);
+		console.log(data);
+		
+		let hello;
+		//hello = function(val){return "hello" + val}
+		//hello = (val) => "hello" + val;
+		  hello = val => "hello" + val;
+		  let v = hello("aaaa");
+		  console.log(v);
+		  document.getElementById("demo").innerHTML = hello("방가방가");
+		  
+		 //매개변수 2개 이상인 경우
+		 //function call(a,b) or  function call(a,b,c,d)
+		 // let foo3 = (a,b) => {return a  + b;}
+		 let foo3 = (a,b) => a + b;
+		 let v2 = foo3(10,20);
+		 console.log(v2);
+		 
+		 //만약에 함수안에 여러개의 논리가 필요하다면 (if , case ....)  {구현}
+		 let foo4 = (a,b) => {let c = 100; return a + b + c};
+		 let v3 = foo4(100,100);
+		 console.log(v3);
+		 
+		 //응용
+		 //객체 반환시
+		 //함수 객체 return >> json
+		 let foo5 = () => ({a:1 , b:2 , c:3});
+		 let vobj = foo5();
+		 console.log(vobj);
+		 
+		 //즉시 실행 함수 (암기)\
+		 (
+			function(){
+				console.log("즉시 실행 함수");
+				//원칙적으로 함수는 호출에 의해서
+			}()		 
+		 );
+		 //위 코드를 화살표 함수를 바꾸세요
+		 (
+			()=>console.log("화살표 즉시 실행 함수")		 
+		 )();
+    
+		 // 즉시 실행 함수 개인 연습
+		 function aa () {document.write("항아리1")}
+		(	function aa () {document.write("항아리2")}	)();
+		(	function aa () {document.write("항아리3")}()	);
+		(	()=> {document.write("항아리4")}	)();
+	    
+	    // Arrays가 가지고 있는 다양한 함수 활용하기
+	    // https://www.w3schools.com/jsref/jsref_obj_array.asp
+	    
+	    /* 
+	    암기(초급자)
+	    1. for(let i =0; i <10; i++){}
+	    2. for(let index in Array){ Array[index] }
+	    3. for(let value of Array){value}
+	    
+	    객체 (json) 
+	    객체를 for문으로 사용가능 POINT
+	    JSON {a:1, b:2, c:3}
+	    1. for(let key in Object){객체[key]}  >>  객체["a"] >> 1 
+	    2. let obj = {a:1} >> obj.a >> 1
+	    
+	    
+	    추가적으로 
+	    Array.isArray()
+	    1. Array.forEach(function(value, index, array){})
+	    2. Array.map()
+
+   		 */
+   		 
+   		 //<p id="demo2"></p>
+   		 function myFunc(){
+   			 const data = ["A", "B", "C", "D"];
+   			 let x = document.getElementById("demo2");
+   			 x.innerHTML = Array.isArray(data); // 너 배열 맞니 (true, false)
+   		 }
+   		 
+   		 myFunc();
+   		 
+   		 let txt="";
+   		 const numbers = [45,5,8,16,25];
+   		 //Array.forEach(function(value, index, array){})
+   		 // 니가 가지고 있는 배열의 개수 만큼 함수를 호출할 꺼야 (parameter 값을 전달해 줄게 잘 써먹어 봐 ...)
+   		 function myFunc2(value, index, array){ // myFunc2(x, y, z)
+   			 txt ="(" + value + ")" + "["+  index +"]" + "["+ array +"]";
+		 	 console.log(txt);
+		 }
+		 numbers.forEach(myFunc2); // callback 배열 개수 만큼 자동 호출
+		 
+		 numbers.forEach((v, i, arr)=> { txt ="*" + value + "*" + "["+  index +"]" + "["+ array +"]";
+		 	 console.log(txt); })
+   		 
+  </script>
+</html>
+
