@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Test/src/main/webapp/deafult.jsp&apos; to &apos;default.jsp&apos;" description="Rename resource &apos;deafult.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/deafult.jsp" name="default.jsp" stamp="1684835627985" updateReferences="true"/>
+</session>
