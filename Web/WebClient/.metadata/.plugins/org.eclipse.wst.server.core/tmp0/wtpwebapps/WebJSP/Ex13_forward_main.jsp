@@ -42,8 +42,11 @@
 
 %>
 
+<jsp:forward page="<%=viewurl %>"></jsp:forward>
+
 <!-- 
 forward 가지고 있는 페이지는 아래있는 내용이 의미 없다
+"<jsp:forward page=..................." 이거 안쓰면 페이지 fowarding도 안되고 아래 페이지 보임.
 Buffer 비우고 그 Buffer에 forward페이지의 내용을 담아요
  -->
 

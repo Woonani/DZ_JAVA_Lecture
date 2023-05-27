@@ -1,0 +1,7 @@
+package kr.or.kosa.service;
+
+import javax.swing.Action;
+
+public class RegisterOkServiceAction implements Action {
+
+}

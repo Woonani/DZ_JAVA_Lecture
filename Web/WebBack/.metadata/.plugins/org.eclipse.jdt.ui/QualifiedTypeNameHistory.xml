@@ -18,4 +18,16 @@
     <fullyQualifiedTypeName name="kr.or.kosa.utils.ConnectionHelper"/>
     <fullyQualifiedTypeName name="kr.or.kosa.dto.RegisterDto"/>
     <fullyQualifiedTypeName name="kr.or.kosa.dao.RegisterDao"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="kr.or.kosa.service.RegisterOkServiceAction"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+    <fullyQualifiedTypeName name="javax.servlet.annotation.WebServlet"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
+    <fullyQualifiedTypeName name="javax.swing.Action"/>
+    <fullyQualifiedTypeName name="kr.or.kosa.action.Action"/>
+    <fullyQualifiedTypeName name="kr.or.kosa.service.memoServiceAction"/>
+    <fullyQualifiedTypeName name="kr.or.kosa.service.memoListServiceAction"/>
+    <fullyQualifiedTypeName name="kr.or.kosa.action.ActionForward"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
 </qualifiedTypeNameHistroy>

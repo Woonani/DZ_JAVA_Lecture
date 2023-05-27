@@ -160,7 +160,9 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="C:\Douzone\Web\WebBack\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Douzone\Web\WebBack\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\WebJSP_EL_JSTL" path="/WebJSP_EL_JSTL" reloadable="true" source="org.eclipse.jst.jee.server:WebJSP_EL_JSTL"/><Context docBase="C:\Douzone\Web\WebBack\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\WebServlet_2" path="/WebServlet_2" reloadable="true" source="org.eclipse.jst.jee.server:WebServlet_2"/></Host>
+      <Context docBase="C:\Douzone\Web\WebBack\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Douzone\Web\WebBack\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\WebServlet_91_Memo_Mvc_Interface" path="/WebServlet_91_Memo_Mvc_Interface" reloadable="true" source="org.eclipse.jst.jee.server:WebServlet_91_Memo_Mvc_Interface">
+<Resource auth="Container" driverClassName="oracle.jdbc.OracleDriver" maxActive="20" maxIdle="20" maxTotal="20" maxWait="-1" name="jdbc/oracle" password="1004" type="javax.sql.DataSource" url="jdbc:oracle:thin:@localhost:1521:XE" username="KOSA"/>
+</Context></Host>
     </Engine>
   </Service>
 </Server>
