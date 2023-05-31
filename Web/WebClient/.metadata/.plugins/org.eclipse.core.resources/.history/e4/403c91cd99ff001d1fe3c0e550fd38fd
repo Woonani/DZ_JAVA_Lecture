@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		
+		  // 요소를 생성
+		  $("#display1").click(function(){ // 왜 이런 차이가..?
+		     const tag = $("<div><div>").html("<b>Hello world</b>"); // 이 한 줄 만으로는 doc에 생성 X
+		     //const tag3 = $("div").html("<b>appear</b>"); //<div id="data">안에 html()안을 넣어라 =>  tag3에 담음
+		     console.log(tag);
+		     $('#data').append(tag); // <div id="data">안에 자식 div로 들어감
+		     //$('#data').append(tag3); // <div id="data">안에 자식 div로 들어감
+		  });
+		  
+		  // 요소를 전부 비움
+		  $("#display2").click(function() {
+	      	 $("#data").empty();
+		  })
+		  
+		  // 요소를 뒤에서 부터 하나씩 삭제
+		  $("#display3").click(function() {
+	      	 let kids = $("#data").children();
+	      	 //console.log("data-children ", kids.length);
+	      	 $("#data").children().eq(kids.length-1).remove();
+	      	 
+		  })
+
+		});
+
+	</script>
+</head>
+<body>
+	<div id="data"></div>
+	<p id="display1">If you click on me, I will appear.</p>
+	<p id="display2">If you click on me, I will disappear.</p>
+	<p id="display3">If you click on me, I will disappear One By One.</p>
+</body>
+</html>

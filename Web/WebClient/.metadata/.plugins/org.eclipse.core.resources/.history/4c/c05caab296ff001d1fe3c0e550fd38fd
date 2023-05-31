@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		  $("#display1").click(function(){
+		     const tag = $("<div><div>").html("<b>Hello world</b>");
+		     const tag3 = $("div").html("<b>appear</b>"); //<div id="data">안에 html()안을 넣어라 =>  tag3에 담음
+		     console.log(tag);
+		     //$('#data').append(tag);
+		     $('#data').append(tag3);
+		  });
+		  
+		  $("#display2").click(function() {
+	      	// const tag2 = $()
+		  })
+
+		});
+
+	</script>
+</head>
+<body>
+	<div id="data"></div>
+	<p id="display1">If you click on me, I will appear.</p>
+	<p id="display2">If you click on me, I will disappear.</p>
+</body>
+</html>

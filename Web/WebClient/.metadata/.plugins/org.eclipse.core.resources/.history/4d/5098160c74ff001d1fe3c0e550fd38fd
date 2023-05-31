@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		/*
+		$(function(){
+			
+			
+		});
+		사용하지 않아도 Jquery 사용할 수 있어요 
+		*/
+		
+		function scriptFunction(){
+			let arrayobj=[];
+			
+			/*
+			101th 홍길동 10
+			102th 김유신 20
+			103th 유관순 30
+			
+			table 태그에 각각 text 값을 read 해서 ....
+			
+			아래와 같은 형식의 객체배열을 만들고 ....
+			[{},{},{}]
+			
+			ex) {th:101th , name:홍길동 , age:10} 형식 객체 
+			
+			배열에 push 하세요
+			arrayobj.push({});  
+			*/
+			
+				let obj = {};
+				obj.th = "a";
+				obj.name = "b";
+				obj.age = "c";
+				console.log(obj);
+			//let arr = $('table').children().children().children().html();
+			//console.log(arr);
+			let arr = $('table').children().children()
+			console.log(arr);
+			$.each(arr, function(i){
+				console.log(this);
+				$(this.children.html).each(function(i, ele){
+					console.log(ele, i)
+				})
+			})
+		}
+		
+		
+	</script>	
+	</head>
+<body>
+<table>
+		<thead>
+			<tr>
+				<td>기수</td><td>이름</td><td>번호</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>101th</td><td>홍길동</td><td>10</td>
+			</tr>
+			<tr>
+				<td>102th</td><td>김유신</td><td>20</td>
+			</tr>
+			<tr>
+				<td>103th</td><td>유관순</td><td>30</td>
+			</tr>
+		</tbody>
+	</table>
+	<p>
+		<button onclick="scriptFunction()">함수호출</button>
+	</p>
+	<div id="display"></div>
+	<div id="display2"></div>
+</body>
+</html>

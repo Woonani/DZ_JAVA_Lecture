@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Insert title here</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
         <script type="text/javascript">
             const data = {
                 "title": "Recent Uploads tagged raccoon",
@@ -276,9 +277,12 @@
     		
 	            // Ex30_DOM_Event_Quiz.html 예제를 그대로 사용해서
 	            // let myphotos=[] //이미지 경로 push() ...
-	            for(let v of data.items){
+	            /* for(let v of data.items){
 	            	myphotos.push(v.media.m);
-	            }
+	            } */
+	            $.each(data.items, function(i, o) {
+					myphotos.push(o.media.m);
+				})
             
             }
         </script>

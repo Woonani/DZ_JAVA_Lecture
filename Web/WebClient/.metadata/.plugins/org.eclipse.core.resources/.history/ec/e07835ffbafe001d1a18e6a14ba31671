@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+		.redcolor{color:red}
+		.bluecolor{color:blue}
+		.greencolor{color:green}
+		.whitecolor{color:white}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+	<script type="text/javascript">
+	/*
+	addClass() - Adds one or more classes to the selected elements
+	removeClass() - Removes one or more classes from the selected elements
+	toggleClass() - Toggles between adding/removing classes from the selected elements
+	css() - Sets or returns the style attribute
+	*/
+		$(function(){
+			// # 요약 : 
+			
+		});
+		
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

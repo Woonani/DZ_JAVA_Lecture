@@ -1,7 +1,0 @@
-package kr.or.kosa.service;
-
-import kr.or.kosa.action.Action;
-
-public class memoServiceAction implements Action {
-	
-}

@@ -1,9 +1,0 @@
-package kr.or.kosa.service;
-
-import javax.swing.Action;
-
-import kr.or.kosa.action.ActionForward;
-
-public class RegisterOkServiceAction implements Action {
-	
-}

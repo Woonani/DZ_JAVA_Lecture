@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+	<script type="text/javascript">
+	/*
+	[javascript]
+	1. for(let index in Arrays){Array[index]}
+	2. Object(JSON) : for(let key in jsonObj){jsonobj[key]}
+	3. array.forEach(function(value,index,array){}) 추가),  array.map()..
+	
+	[jquery] $().each() 반복문
+	1. $(selector).each(function(){});  >> ex) $('p').each(function(){ this활용 });
+	2. $(selector).each(function(index){ this활용 });
+	3. $(selector).each(function(index , element){ element });  ^^  초급자
+	
+	[jquery] $.each()
+	1. $.each(Array or Object , function(){ this 활용 });
+	2. $.each(Array or Object , function(index){ this 활용 });
+	3. $.each(Array or Object , function(index ,element){ element });  초급자
+	
+	parameter JSON 객체라면
+	let obj = {name:"홍길동" , age:100};
+	$(obj).each(function(key, value){ value });
+	$.each(obj , function(key , value){ value})
+   */
+		$(function(){
+			$('p').each(function(index) {
+				//callback 함수 4번 호출
+				// this > <p>
+				// $(this) jquery 가지는 다양한 함수를 사용가능 $(this).text()
+				console.log("this : " + $(this).text()); // p태그는 value 값이 없으니까 유용
+				console.log(this);
+				
+				//index활용하기
+				$(this).attr("id", "param-" + index);
+				$(this).attr("style", "color:red" );
+				// <p id="param-0" style="color:red">java</p>
+				// <p id="param-1" style="color:red">java</p>
+				
+				//jquery 거의 모든 함수는 parameter json 객체를 사용할 수 있다!
+				$(this).attr(
+						{
+							"id":"param-" + index,
+							"style":"color:red"
+				})
+			})
+			
+			$('p').each(function(index , element){  //초급자 편해요
+				console.log("index : " + index);
+				console.log(element); // <p>aaa</p>
+				console.log($(element).text());
+			});
+			
+			$('#btn').click(function(){
+				alert($('#param-1').text());
+			});
+			
+			/*
+			let arr = [];
+			arr.push("A");
+			
+			let obj={};
+			let objArray=[{},{},{}]
+			*/
+			
+			const array = [
+				{"name":"naver", "link":"http://www.naver.com"}, 
+				{"name":"daum", "link":"http://www.daum.net"}, 
+				{"name":"kosa", "link":"http://www.kosa.or.kr"}
+			];
+			
+			// 객체 배열 ^^
+			// 문제1: $.each() 문을 사용해서 name 속성의 value값, link 속성의 value값 출력
+			
+			$.each(arr, function(i,obj){
+				console.log(obj.name + " , " + obj["link"]);
+			}
+			
+			//==================
+			
+			
+			//1. $.each() 사용해서 no값과 title 값을 출력
+			/* $.each(function(i) {
+				let arr = this.values;
+				for(let i in arr){
+					console.log(i);
+				}
+			}) */
+			
+			
+			//2. $.each(boardobj, function(){}) key, value 값을 출력하는데
+			
+			
+		});
+	</script>
+</head>
+<body>
+	<p>java</p>
+	<p>jsp</p>
+	<p>oracle</p>
+	<p>jquery</p>
+	<input type="button" value="클릭" id="btn">
+	
+</body>
+</html>
+
+

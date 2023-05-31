@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript" src="script/jquery-3.7.0.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+	<script type="text/javascript">
+	// text() 와 html()차이 - html()은 태그 인정
+	/*
+	  # 요약 - text() 와 html()차이
+	  text() : 읽을때(getter) >> 요소의 텍스트만 인식한다. 	>> 콘솔에 [ 안녕하세요정말방가방가 ]라고 찍힘
+	  html() : 읽을때(getter) >> 요소의 태그까지 인식한다. 	>> 콘솔에 [ 안녕하세요<b>정말</b>방가방가 ]라고 찍힘
+	  
+	  text() : 쓸때(setter) >> 쓰려는 내용을 모두 텍스트로 인식한다. 	>> 콘솔에 [ 안녕하세요정말방가방가 ]라고 찍힘
+	  html() : 쓸때(setter) >> 쓰려는 내용의 html을 인식할 수 있다. 	>> 콘솔에 [ 안녕하세요<b>정말</b>방가방가 ]라고 찍힘
+	  
+	  
+	  
+	*/
+		$(function() {
+			$('#btn1').click(function() {
+				console.log("test", $('#test').text()) // getter 
+				// test 안녕하세요정말방가방가
+			});
+
+			$('#btn2').click(function() {
+				console.log("test", $('#test').html()) // getter 태그를 인정 (태그가 출력이 됨)
+				
+			});
+
+			$('#btn3').click(function() {
+				$('#test').text("<div>AAAAA</div>"); //setter 
+				//$('#test').html("<div>AAAAA</div>"); //setter // 태그를 인정 (태그가 해석이 됨)
+			});
+			
+		});
+		
+	</script>
+</head>
+<body>
+	<p id="test">안녕하세요<b>정말</b>방가방가</p>
+	<button id="btn1">show text</button>
+	<button id="btn2">show html</button>
+	<button id="btn3">html</button>
+</body>
+</html>

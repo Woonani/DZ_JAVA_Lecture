@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+		.my{background-color: lime;}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			
+			
+		});
+	</script>
+</head>
+<body>
+	<input name="test_name" value="test_1"><br>
+	<input name="test_name" value="test_2"><br>
+	<input name="test_name" value="test_3"><br>
+	<hr>
+	<button id="type1">type1 (for)</button>
+	<button id="type2">type2 (each)</button>
+</body>
+</html>
