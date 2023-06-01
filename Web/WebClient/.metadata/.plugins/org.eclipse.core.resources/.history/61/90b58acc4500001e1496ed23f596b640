@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Asynchronous JavaScript</title>
+	<script type="text/javascript">
+	/* 
+	자바스크립트 함수의 동기실행 비동기실행의 이해
+	*/
+	/*
+	동기처리
+	console.log(1);
+	console.log(2);
+	console.log(3);
+	console.log(4);
+	*/
+	
+	// 비동기 실행 : 순서를 보장하지 않는다. 
+	console.log(1);
+	console.log(2);
+	setTimeout(() => {    // 얘가 3초 지연이 걸리니까
+		console.log(3);
+	}, 3000);
+	console.log(4);    // 얘가 실행됨. 
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+	<script type="text/javascript">
+	
+		$(function(){
+			
+
+			const array = [
+				{"name":"naver", "link":"http://www.naver.com"}, 
+				{"name":"daum", "link":"http://www.daum.net"}, 
+				{"name":"kosa", "link":"http://www.kosa.or.kr"}
+			];
+			
+			// 객체 배열 ^^
+			// 문제1: $.each() 문을 사용해서 name 속성의 value값, link 속성의 value값 출력
+			
+			$.each(array, function (i) {
+				console.log(i +" " + this.name +" " + this.link);
+			})
+			
+			console.log("------------------------------------------------------")
+			
+			const boardobj = {
+					values:[
+						{no:1, title:"hello world"},
+						{no:2, title:"korea"},
+						{no:3, title:"kosa world"}
+					],
+					shearch : "검색"			
+			}
+						
+			//2. $.each(boardobj, function(){}) key, value 값을 출력하는데		
+			/*
+			$.each(boardobj, function(key,values){
+				if(typeof(values) == "object"){
+					$.each(values, function(i, o) {
+						console.log(i + " / " + o["no"] + " / " + o["title"]);
+					})
+				}else{
+					console.log(key + " / " + values);
+				}
+			});
+			*/
+			//----------------
+			//2. $.each(boardobj, function(){}) key ,value 값을 출력하는데
+			/*
+			$.each(boardobj,function(key,values){
+				//console.log(key + " , " + values);
+				
+				//values  하나는 Array
+				//        하나는 Text
+				if(typeof(values) == "object"){
+					//배열이구나
+					//[{},{},{}]
+					$.each(values,function(index,obj){
+						console.log(index + " / " + obj["no"] + " / " + obj["title"]);
+					});
+					
+				}else{
+					console.log(key + " / " + values);
+				}
+			});
+			*/	
+				/* 
+				
+				0 / 1 / hello world
+ 				1 / 2 / korea
+ 				2 / 3 / kosa world
+ 				search / 검색
+				*/
+			
+		});
+	</script>
+</head>
+<body>
+	<p>java</p>
+	<p>jsp</p>
+	<p>oracle</p>
+	<p>jquery</p>
+	<input type="button" value="클릭" id="btn">
+	
+</body>
+</html>
+
+

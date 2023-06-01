@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+	/* 
+		1. XMLHttpRequest 객체 얻기
+		2. onreadystatechange 이벤트 핸들러 구현 (함수)
+		3. 요청 정보
+		4. 
+		5. 
+	*/
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		//$.ajax('url', function(){})
+		//$.ajax('url', (response)=>{})
+		
+		// 비동기 함수 처리
+		function delay(sec, callback){ // callback parameter는 함수의 주소를 받는다
+			setTimeout(() => {
+				callback(new Date());
+			}, sec * 1000);
+		}
+		
+		console.log('delaystart', new Date());
+		
+		//fucntion call (result0{console.log(result)}
+		//delay(1,call);
+		delay(1,(result) => {console.log(result)});
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>

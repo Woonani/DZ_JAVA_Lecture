@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		//$.ajax('url', function(){})
+		//$.ajax('url', (response)=>{})
+		
+		// 비동기 함수 처리
+		/*
+		function delay(sec, callback){ // callback parameter는 함수의 주소를 받는다
+			setTimeout(() => {
+				callback(new Date());
+			}, sec * 1000);
+		}
+		
+		console.log('delaystart', new Date());
+		
+		//fucntion call (result0{console.log(result)}
+		//delay(1,call);
+		delay(1,(result) => {console.log(result)});
+		
+		console.log('delay end');
+		
+		결과 : 비동기 함수 ... 순서가 보장 되지 않아요^^
+		*/
+		
+		/*
+		// 3개의 함수를 만들어서 일정한 1초 또는 2초 간격으로 출력되기를 원해요
+		function delay(sec, callback){ // callback parameter는 함수의 주소를 받는다
+			setTimeout(() => {
+				callback(new Date());
+			}, sec * 1000);
+		}
+		
+		delay(2,(result) => {console.log(1, result)}); // 2초
+		delay(2,(result) => {console.log(2, result)}); // 4초
+		delay(2,(result) => {console.log(3, result)}); // 6초
+		
+		// 준비 땅 3개 함수 거의 동시 2초 뒤 거의 동시 실행
+		*/
+		
+		// 3개의 비동기 함수가 순차적으로 실행 되기를 원해요
+		// 함수(함수(함수()))
+		// callback 패턴 (콜백안에 콜백) - 콜백지옥이라고도 함
+		// 아래 코드는 순차적으로 실행되기는 하지만 가독성이 좋지 않다.
+		// 유지 보수 문제 .....
+		/*
+		function delay(sec, callback){ // callback parameter는 함수의 주소를 받는다
+			setTimeout(() => {
+				callback(new Date());
+			}, sec * 1000);
+		}
+		
+		delay(2,(result) => {
+			console.log(1, result);
+			delay(2,(result) => {
+				console.log(1, result);
+				delay(2,(result) => {
+					console.log(1, result);
+				});	
+			});	
+		});
+		*/
+		//callback의 지옥에서 탈출하자
+		// 비동기를 순차적으로 실행하자
+		// 필요 > promise
+		
+		/*
+		function delayPromise(sec){
+			// return new Promise(function(resolve, reject) { // 정상 > resolve, 비정상(예외상황) > reject  
+			// });
+			return new Promise((res,rej) => {
+				setTimeout(() => {
+					res(new Date()); // 함수가 param으로 들어옴
+				}, sec * 1000);
+			});
+		}
+		
+		delayPromise(1).then((result) => {console.log(1,result)}); // date값을 얻을 수 있음 , then은 "성공하면"이라는 의미를 가짐
+		
+		*/
+		
+		// 당신이 Promise를 사용한다 하더라도 callback에 callback하는 것처럼 사용한다면 ... 
+		// 다를 것이 없다
+		
+		function delayPromise(sec){
+			// return new Promise(function(resolve, reject) { // 정상 > resolve, 비정상(예외상황) > reject  
+			// });
+			return new Promise((res,rej) => {
+				setTimeout(() => {
+					res(new Date()); // 함수가 param으로 들어옴
+				}, sec * 1000);
+			});
+		}
+		
+		delayPromise(1).then((result) => {console.log(1,result);
+			delayPromise(1).then((result) => {console.log(2,result);});
+			
+		}); 
+		
+		
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>
