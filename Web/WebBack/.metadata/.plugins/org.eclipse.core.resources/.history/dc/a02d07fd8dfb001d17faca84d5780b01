@@ -1,0 +1,42 @@
+package kr.or.kosa.service;
+
+import java.util.List;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import kr.or.kosa.action.Action;
+import kr.or.kosa.action.ActionForward;
+import kr.or.kosa.dao.MemoDao;
+import kr.or.kosa.dto.Memo;
+
+public class memoListServiceAction implements Action {
+
+	@Override
+	public ActionForward excute(HttpServletRequest request, HttpServletResponse response) {
+		
+		MemoDao dao = new MemoDao();
+  	  	ActionForward forward = null;
+
+		try {
+			   List<Memo> memolist = dao.getMemoList();
+			   
+			   request.setAttribute("memolist", memolist);
+			   System.out.println("메모리스트 서비스 dao 함수 밑");
+			   forward.setRedirect(false); // forward 방식으로 ....
+				
+			   forward.setPath("memolist.jsp");
+			   System.out.println("메모리스트 서비스 : "+forward);
+				
+				
+			   
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+  	 
+		System.out.println("메모리스트 서비스 forward : "+forward);
+		return forward;
+
+	}
+}

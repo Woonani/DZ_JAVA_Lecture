@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>		
+	<script type="text/javascript">
+		 
+		// jQuery.getJSON( url [, data ] [, success ] )
+		// Description: Load JSON-encoded data from the server using a GET HTTP request.
+		
+		
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>

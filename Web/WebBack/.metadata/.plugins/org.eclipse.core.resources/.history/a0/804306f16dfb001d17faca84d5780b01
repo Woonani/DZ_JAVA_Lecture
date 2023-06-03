@@ -1,0 +1,44 @@
+package kr.or.kosa.controller;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import kr.or.kosa.action.Action;
+import kr.or.kosa.action.ActionForward;
+import kr.or.kosa.service.memoServiceAction;
+
+@WebServlet("/MemoServlet")
+public class MemoController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+    
+
+    public MemoController() {
+        super();
+       
+    }
+    // ============ 이거 위에꺼 있어야 하나??
+    
+    private void doProcess(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    	// 1 한글
+    	request.setCharacterEncoding("UTF-8");
+
+    	// 2 데이터 받기
+    	String requestUri = request.getRequestURI();
+    	String contextPath = request.getContextPath();
+    	String urlcommand = requestUri.substring(contextPath.length());
+    	
+    	Action action = null;
+    	ActionForward forward=null;
+    	
+    	// Client 요청
+    	action = new memoServiceAction();
+		forward = action.execute(request, response);
+    }
+}
+
+

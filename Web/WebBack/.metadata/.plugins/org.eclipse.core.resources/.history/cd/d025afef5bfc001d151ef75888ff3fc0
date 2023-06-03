@@ -1,0 +1,97 @@
+package test;
+
+
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+public class ForProgrammers {
+
+	public static void main(String[] args) {
+		// 타입 설정 X이면 object
+		HashMap hashMap = new HashMap();  
+		//확인
+		System.out.println(hashMap.toString()); //{}
+		
+		// 일반 적인 선언 - 타입설정
+	    HashMap<String, Integer> hashMap1 = new HashMap<>();  
+	    hashMap1.put("a", 111);
+	    hashMap1.put("b", 222);
+	    //확인
+	    System.out.println("hashMap1 - " + hashMap1.toString()); //{a=111, b=222}
+	    
+
+	    // 변수 선언 + 초기값 지정
+	    HashMap<String, Integer> hashMap2 = new HashMap<>() {{
+	    	put("A", 1000); put("B", 2000);
+	    }};
+	    //확인
+	    System.out.println("hashMap2 - " + hashMap2.toString()); //{A=1000, B=2000}
+	    
+		// 초기 용량 지정 2
+		HashMap<String, Integer> hashMap3 = new HashMap<>(2);
+		//확인
+		hashMap3.put("c", 33);
+	    hashMap3.put("d", 44);
+	    hashMap3.put("e", 55);
+	    System.out.println("hashMap3 - " + hashMap3.toString()); //{d=44, e=55, c=33}
+		//근데 들어가네..? 	
+	    	
+	    // hashMap2의 값을 hashMap4에 카피
+	    HashMap<String, Integer> hashMap4 = new HashMap<>(hashMap3);
+	    //확인
+	    System.out.println("hashMap4 - " + hashMap4.toString()); //{c=33, d=44, e=55}
+	    // 신기하게도 순서는 지맘대로네..?
+	    
+	    // 삭제는 remove(key)
+	    hashMap4.remove("d");
+	    //확인
+	    System.out.println("hashMap4 - " + hashMap4.toString()); //{c=33, e=55}
+	    
+    }
+	
+
+}
+/*
+Map<String, String> dictionary = new HashMap<>() {{
+	    		put(".-", "a");
+	    		put("-...", "b");
+	    		put("-.-.", "c");
+	    		put("-..", "d");
+	    		put(".", "e");
+	    		put("..-.", "f");
+	    		put("--.", "g");
+	    		put("....", "h"); 
+	    		put("..", "i");
+	    		put(".---", "j");
+	    		put("-.-", "k");
+	    		put(".-..", "l");
+	    		put("--", "m");
+	    		put("-.", "n");
+	    		put("---", "o");
+	    		put(".--.", "p");
+	    		put("--.-", "q");
+	    		put(".-.", "r");
+	    		put("...", "s");
+	    		put("-", "t");
+	    		put("..-", "u");
+	    		put("...-", "v");
+	    		put(".--", "w");
+	    		put("-..-", "x");
+	    		put("-.--", "y");
+	    		put("--..", "z");
+	    	}};
+	    	
+	    	for(String a : dictionary.keySet()) {
+	    		System.out.println("v : "+dictionary.get(a));
+	    	}
+	    	
+	    	String letter = ".--. -.-- - .... --- -.";
+	    	
+	        String answer =  Arrays.stream(letter.split(" "))
+	            .map(dictionary::get)
+	            .collect(Collectors.joining());
+	        
+	        System.out.println(answer);
+*/

@@ -1,0 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
+<%
+	String id = request.getParameter("ID");
+	if(id.equals("hong")){
+%>
+	<%=id%><img src="images/1.jpg" style="width:100px;height:100px">
+<%		
+	}
+%>    
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h3>EL & JSTL</h3>
+<!-- 
+param 객체  >> request.getParameter()
+request.getParameter("ID") >>     ${param.ID}
+ -->
+<c:if test="${param.ID == 'hong'}">
+	${param.ID}<img src="images/1.jpg" style="width:100px;height:100px">
+</c:if>
+</body>
+</html>
+
+
+
+

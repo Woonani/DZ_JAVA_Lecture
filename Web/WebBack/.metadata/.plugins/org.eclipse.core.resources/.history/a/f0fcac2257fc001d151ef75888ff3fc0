@@ -1,0 +1,20 @@
+package test;
+
+import java.util.HashMap;
+
+public class ForProgrammers {
+
+	
+	public static void main(String[] args) {
+		
+		char[] x = {'a', 's', 'p'};
+		String s = "";
+		for(char i : x) {
+			s += i;
+			System.out.println(s);
+		}
+		 
+		
+	}
+
+}

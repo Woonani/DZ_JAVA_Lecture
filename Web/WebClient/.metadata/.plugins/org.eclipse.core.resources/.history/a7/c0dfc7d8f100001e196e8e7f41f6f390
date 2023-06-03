@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>		
+	<script type="text/javascript">
+		 
+		// jQuery.getJSON( url [, data ] [, success ] )
+		// Description: Load JSON-encoded data from the server using a GET HTTP request.
+		// getJSON >> dataType:"json"
+		$(function () {
+			$('#btn').click(function(){
+				let data2 = $.getJSON( "Ex04_json.json");
+				$('#display').val(data2.responseJSON);
+				console.log(data2)
+			})
+		})
+		
+	</script>
+</head>
+<body>
+	<div id="btn">
+		<div class="btnload">JSON DATA LOAD</div>
+	</div>
+	<div id="display"></div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+package kr.or.kosa.kto;
+
+public class Emp {
+	private int empno;
+	private String ename;
+	private int getEmpno;
+	public int getEmpno() {
+		return empno;
+	}
+	public void setEmpno(int empno) {
+		this.empno = empno;
+	}
+	public String getEname() {
+		return ename;
+	}
+	public void setEname(String ename) {
+		this.ename = ename;
+	}
+	public int getGetEmpno() {
+		return getEmpno;
+	}
+	public void setGetEmpno(int getEmpno) {
+		this.getEmpno = getEmpno;
+	}
+	@Override
+	public String toString() {
+		return "Emp [empno=" + empno + ", ename=" + ename + ", getEmpno=" + getEmpno + "]";
+	}
+
+}
