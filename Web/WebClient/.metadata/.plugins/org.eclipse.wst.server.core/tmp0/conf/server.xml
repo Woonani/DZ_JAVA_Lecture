@@ -160,7 +160,41 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="C:\Douzone\Web\WebClient\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Douzone\Web\WebClient\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\WebJSP" path="/WebJSP" reloadable="true" source="org.eclipse.jst.jee.server:WebJSP"/><Context docBase="C:\Douzone\Web\WebClient\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Web_Jquery" path="/Web_Jquery" reloadable="true" source="org.eclipse.jst.jee.server:Web_Jquery"/><Context docBase="C:\Douzone\Web\WebClient\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\WebScript" path="/WebScript" reloadable="true" source="org.eclipse.jst.jee.server:WebScript"/><Context docBase="C:\Douzone\Web\WebClient\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\WebScript_ajax" path="/WebScript_ajax" reloadable="true" source="org.eclipse.jst.jee.server:WebScript_ajax"/><Context docBase="C:\Douzone\Web\WebClient\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Web_Jquery_Ajax" path="/Web_Jquery_Ajax" reloadable="true" source="org.eclipse.jst.jee.server:Web_Jquery_Ajax"/></Host>
+      <Context docBase="C:\Douzone\Web\WebClient\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Douzone\Web\WebClient\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\WebJSP" path="/WebJSP" reloadable="true" source="org.eclipse.jst.jee.server:WebJSP"/><Context docBase="C:\Douzone\Web\WebClient\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Web_Jquery" path="/Web_Jquery" reloadable="true" source="org.eclipse.jst.jee.server:Web_Jquery"/><Context docBase="C:\Douzone\Web\WebClient\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\WebScript" path="/WebScript" reloadable="true" source="org.eclipse.jst.jee.server:WebScript"/><Context docBase="C:\Douzone\Web\WebClient\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\WebScript_ajax" path="/WebScript_ajax" reloadable="true" source="org.eclipse.jst.jee.server:WebScript_ajax"/><Context docBase="C:\Douzone\Web\WebClient\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Web_Jquery_Ajax" path="/Web_Jquery_Ajax" reloadable="true" source="org.eclipse.jst.jee.server:Web_Jquery_Ajax"/><Context docBase="C:\Douzone\Web\WebClient\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Web_Jquery_Board" path="/Web_Jquery_Board" reloadable="true" source="org.eclipse.jst.jee.server:Web_Jquery_Board">
+<Resource auth="Container" driverClassName="oracle.jdbc.OracleDriver" maxActive="20" maxIdle="20" maxTotal="20" maxWait="-1" name="jdbc/oracle" password="1004" type="javax.sql.DataSource" url="jdbc:oracle:thin:@localhost:1521:XE" username="KOSA"/>
+</Context><Context docBase="C:\Douzone\Web\WebClient\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\WebServlet_92_Board_Model2_Mvc" path="/WebServlet_92_Board_Model2_Mvc" reloadable="true" source="org.eclipse.jst.jee.server:WebServlet_92_Board_Model2_Mvc">
+	<!-- maxActive : 최대 동시 대여 가능 커넥션수
+	     maxIdle : 최소 보유 커넥션수 
+	     maxWait : 최대 대기 시간 
+		-> 넘겼는데도 빈 커넥션이 없으면 Exception (1=5초, 180=15분) 
+		removeAbandoned : (true) 대여시간 	초과했는데 반납 안된 커넥션 처리 
+		removeAbandonedTimeout : 대여시간 설정 ( 1=5초 60=5분 ) 
+		logAbandoned : (true) 삭제시에 로그를 남길 것인가? 
+		validationQuery : 커넥션이 살아 있는지 체크 하는 쿼리로 오라클의 경우에는 	"select 1 from dual", MySQL의 경우에는 "select 1"
+		testWhileIdle : (true) 커넥션에 	아무런 데이터 송수신이 없을 경우 테스트를 할지 여부를 결정합니다. 
+		timeBetweenEvictionRunsMillis : 커넥션이 	쉬고 있을 때 커넥션 체크 쿼리를 실행하는 시간 간격을 설정합니다. 밀리 세컨드로 설정하며, 저보통 60000(1분)을 줍니다. -->
+
+
+	<Resource auth="Container" driverClassName="oracle.jdbc.OracleDriver" maxActive="100" maxIdle="20" maxWait="-1" name="jdbc/oracle" password="1004" type="javax.sql.DataSource" url="jdbc:oracle:thin:@localhost:1521:XE" username="kosa"/>
+
+	<Resource auth="Container" driverClassName="com.mysql.jdbc.Driver" maxActive="100" maxIdle="20" maxWait="-1" name="jdbc/mysql" password="1004" type="javax.sql.DataSource" url="jdbc:mysql://192.168.0.3:3306/mydb" username="kosa"/>
+</Context><Context docBase="C:\Douzone\Web\WebClient\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Emp2_Model2_Mvc_Team1" path="/Emp2_Model2_Mvc_Team1" reloadable="true" source="org.eclipse.jst.jee.server:Emp2_Model2_Mvc_Team1">
+	<!-- maxActive : 최대 동시 대여 가능 커넥션수
+	     maxIdle : 최소 보유 커넥션수 
+	     maxWait : 최대 대기 시간 
+		-> 넘겼는데도 빈 커넥션이 없으면 Exception (1=5초, 180=15분) 
+		removeAbandoned : (true) 대여시간 	초과했는데 반납 안된 커넥션 처리 
+		removeAbandonedTimeout : 대여시간 설정 ( 1=5초 60=5분 ) 
+		logAbandoned : (true) 삭제시에 로그를 남길 것인가? 
+		validationQuery : 커넥션이 살아 있는지 체크 하는 쿼리로 오라클의 경우에는 	"select 1 from dual", MySQL의 경우에는 "select 1"
+		testWhileIdle : (true) 커넥션에 	아무런 데이터 송수신이 없을 경우 테스트를 할지 여부를 결정합니다. 
+		timeBetweenEvictionRunsMillis : 커넥션이 	쉬고 있을 때 커넥션 체크 쿼리를 실행하는 시간 간격을 설정합니다. 밀리 세컨드로 설정하며, 저보통 60000(1분)을 줍니다. -->
+
+
+	<Resource auth="Container" driverClassName="oracle.jdbc.OracleDriver" maxActive="100" maxIdle="20" maxWait="-1" name="jdbc/oracle" password="1004" type="javax.sql.DataSource" url="jdbc:oracle:thin:@localhost:1521:XE" username="kosa"/>
+
+	<Resource auth="Container" driverClassName="com.mysql.jdbc.Driver" maxActive="100" maxIdle="20" maxWait="-1" name="jdbc/mysql" password="1004" type="javax.sql.DataSource" url="jdbc:mysql://192.168.0.3:3306/mydb" username="Myuser"/>
+</Context></Host>
     </Engine>
   </Service>
 </Server>

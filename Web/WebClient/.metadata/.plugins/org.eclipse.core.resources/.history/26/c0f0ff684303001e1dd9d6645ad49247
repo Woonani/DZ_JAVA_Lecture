@@ -1,0 +1,9 @@
+package kr.or.kosa.dto;
+
+public class Emp {
+	private int empno;
+	private String ename;
+	private int sal;
+	private String job;
+	private int comm;
+}

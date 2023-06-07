@@ -1,0 +1,38 @@
+package com.jquery.ajax.service;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.jquery.ajax.action.Action;
+import com.jquery.ajax.action.ActionForward;
+import com.jquery.ajax.dao.CommentDAO;
+import com.jquery.ajax.dto.BoardVO;
+
+public class CommentServiceAction implements Action {
+
+	@Override
+	public ActionForward excute(HttpServletRequest request, HttpServletResponse response) throws SQLException {
+
+		String comment = request.getParameter("comment");
+		ActionForward forward = new ActionForward();
+ 
+		CommentDAO dao = new CommentDAO();		
+		List<BoardVO> commentlist;
+//		List<BoardVO> boardlist = new ArrayList<>();
+
+		dao.addComment(comment);
+		commentlist = dao.getCommentList();
+
+		//System.out.println("commentlist : " + commentlist.toString());
+
+		// 입력받고 보내주기..?
+		request.setAttribute("commentlist", commentlist);
+		
+		
+		return forward;
+
+	}
+}

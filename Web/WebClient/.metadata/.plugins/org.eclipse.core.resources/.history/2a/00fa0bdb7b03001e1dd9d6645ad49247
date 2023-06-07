@@ -1,0 +1,38 @@
+package com.jquery.ajax.service;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.jquery.ajax.action.Action;
+import com.jquery.ajax.action.ActionForward;
+import com.jquery.ajax.dao.BoardDAO;
+import com.jquery.ajax.dto.BoardVO;
+
+public class BoardListServiceAction implements Action {
+
+	@Override
+	public ActionForward excute(HttpServletRequest request, HttpServletResponse response) {
+
+		BoardDAO dao = new BoardDAO();
+		ActionForward forward = new ActionForward();
+
+		List<BoardVO> boardlist;
+
+		boardlist = dao.getBoardList();
+
+		System.out.println("보드리스트 서비스 boardlist : " + boardlist.toString());
+
+		request.setAttribute("boardlist", boardlist);
+		
+		forward.setRedirect(false); // forward 방식으로 ....
+
+		forward.setPath("/memolist.jsp");
+		System.out.println("메모리스트 서비스 : " + forward);
+		System.out.println("메모리스트 서비스 forward : " + forward);
+		return forward;
+
+	}
+}

@@ -11,6 +11,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Douzone\Web\WebBack\WebServlet_91_Memo_Mvc_Interface"/>
 			<item value="C:\Douzone\Web\WebClient\WebBack"/>
 		</list>
 	</section>
@@ -25,6 +26,9 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Douzone\Web\WebClient\Emp2_Model2_Mvc_Team1"/>
+			<item value="C:\Douzone\Web\WebClient\WebServlet_92_Board_Model2_Mvc"/>
+			<item value="C:\Douzone\Web\WebClient\Web_Jquery_Board"/>
 			<item value="C:\Douzone\Web\WebClient\WebServlet_1"/>
 			<item value="C:\Douzone\Web\WebClient\WebServlet_1_1"/>
 			<item value="C:\Douzone\Web\WebClient\WebServlet_2"/>

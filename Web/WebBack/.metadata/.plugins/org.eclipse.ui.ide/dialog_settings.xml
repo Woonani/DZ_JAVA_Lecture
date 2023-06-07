@@ -7,6 +7,7 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Douzone\Web\WebBack\WebServlet_92_Board_Model2_Mvc"/>
 			<item value="C:\Douzone\Web\WebBack\WebJSP_JDBC_HomeWork"/>
 			<item value="C:\Douzone\Web\WebBack\WebServlet_91_T_Memo_Mvc_Interface"/>
 			<item value="C:\Douzone\Web\WebBack\WebServlet_7_Member_Command"/>

@@ -2,4 +2,14 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+    <fullyQualifiedTypeName name="kr.or.kosa.dto.Member"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="com.jquery.ajax.dao.BoardDAO"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.jquery.ajax.dto.BoardVO"/>
+    <fullyQualifiedTypeName name="com.jquery.ajax.action.Action"/>
+    <fullyQualifiedTypeName name="com.jquery.ajax.dao.CommentDAO"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="com.jquery.ajax.comment.CommentVO"/>
+    <fullyQualifiedTypeName name="com.jquery.ajax.dto.CommentVO"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,15 @@
+1685951631450	Rename package 'kr.or.kosa.action'
+1685951646277	Rename package 'kr.or.kosa.controller'
+1685951713676	Move compilation unit
+1685951721549	Move compilation unit
+1685951752358	Copy compilation unit
+1685951758042	Copy compilation unit
+1685952553626	Rename type 'memoListServiceAction'
+1685953022750	Copy file
+1685953039655	Rename resource 'CommentEdit_v_4.jsp'
+1685956650744	Move 'Board.jsp' to 'webapp'
+1685956658500	Rename resource 'view'
+1685962392163	Rename type 'MemoController'
+1685962533768	Copy file
+1685962867185	Copy compilation unit
+1685964022279	Rename type 'CommentListServiceAction'

@@ -1,0 +1,46 @@
+package com.jquery.ajax.service;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.jquery.ajax.action.Action;
+import com.jquery.ajax.action.ActionForward;
+import com.jquery.ajax.dao.CommentDAO;
+import com.jquery.ajax.dto.CommentVO;
+
+public class CommentServiceAction implements Action {
+
+	@Override
+	public ActionForward excute(HttpServletRequest request, HttpServletResponse response) throws SQLException {
+
+		String comment = request.getParameter("comment");
+		int bseq = Integer.parseInt(request.getParameter("bbsSeq"));
+		
+		ActionForward forward = new ActionForward();
+		List<CommentVO> commentlist= null;
+		try {
+			
+			 CommentDAO dao = new CommentDAO();		
+	
+			 int result = dao.addComment(comment, bseq);
+			 
+			 if(result > 0 ) {
+				commentlist= dao.getCommentList(bseq);
+			 }else {
+				 System.out.println("insert 실패");
+			 }
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
+		request.setAttribute("commentlist", commentlist);
+		
+		
+		return forward;
+
+	}
+}

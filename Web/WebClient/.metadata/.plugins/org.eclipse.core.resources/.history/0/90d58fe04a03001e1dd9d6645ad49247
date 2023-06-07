@@ -1,0 +1,25 @@
+<%@page import="net.sf.json.JSONObject"%>
+<%@page import="kr.or.kosa.dto.Member"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<% 
+	// 객체를 json을 변환
+	//1. JSONObject를 사용하면 >> {} 객체 1개 만들어줌
+	//2. JSONArray 사용하면 >> [{}, {}, {} ..... ] 객체 배열을
+	
+	//class 가지고 생성
+	Member member = new Member();
+	
+	JSONObject obj = JSONObject.fromObject(member);
+
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>

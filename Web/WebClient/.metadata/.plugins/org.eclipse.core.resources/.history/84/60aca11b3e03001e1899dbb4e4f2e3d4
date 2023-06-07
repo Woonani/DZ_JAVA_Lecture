@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$('#login').on("click", function () {
+			
+		
+		/* let id = $('#user_id').val();
+		let pwd = $('#user_pwd').val();
+		console.log(id); */
+		$.ajax(
+				{
+					url:"Ex08_loginok.jsp",
+					//type:"post", 
+					data: {"user_id":$('#user_id').val(), "user_pwd":$('#user_pwd').val()},
+					dataType:"text", 
+					success:function(data){ 
+						console.log("data찍 : " + data);
+						if(data.replace(" ","").equal("success")){
+							$('#message').html('<p>로그인 성공</p>');
+						}else{
+							$('#message').html('<p>로그인 실패</p>');						
+						}
+					},
+					error:function(xhr){ //function(xmlHttpRequset xhr) : 500 , 404  304
+						console.log(xhr.status);
+					},
+					beforeSend:function(){ //readyState=3 (서버에서 데이터 오는 도 중) ... 다른 것은 작업..못하게
+						//이미지를 보여주다가
+						console.log("img load ....");
+					$('.wrap-loading').removeClass("display-none"); // 화면 출력 (style시트를 셀렉터로 가져옴)
+					},
+					complete:function(){ //readyState=4
+						//도착하면 이미지 제거 
+						console.log("img end display none");
+						$('.wrap-loading').addClass("display-none"); 
+					}
+					
+				}		 
+		);
+		
+		})
+	});
+
+	</script>
+		<!-- 
+		$.ajax() 함수를 사용해서 id 값 pwd 값 비동기로 전송하고
+		그 결과에 따라서 : success , fail
+		$('#message').html('<p>로그인 성공</p>')
+		$('#message').html('<p>로그인 실패</p>')
+		Jquery effect 효과 적용 (슬라이드 효과)
+	
+		parameter  연습   >> {}
+		val() , text() , html() , attr() 연습
+		effect > slideUp() , slideDown() 연습
+		
+		숨겨진 함정 : 넘어오는 데이터는 반드시 console 로 출력해서 확인 또 확인 ...
+		if(result == 'success'){} .... 
+		-->
+</head>
+<body>
+<form id="form1" name="form1" action="" method="post">
+		<table>
+			<tr>
+				<td>아이디</td>
+				<td><input type='text' id='user_id' name='user_id' tabindex='1' /></td>
+				<td rowspan='2'>
+					<input type='button' id='login' tabindex='3' value='로그인' style='height: 50px' /></td>
+			</tr>
+			<tr>
+				<td>비밀번호</td>
+				<td><input type='password' id='user_pwd' name='user_pwd' tabindex='2' /></td>
+			</tr>
+		</table>
+	</form>
+	<div id="message"></div>
+</body>
+</html>

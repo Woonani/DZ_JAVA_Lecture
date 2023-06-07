@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;kr.or.kosa.dao&apos; to &apos;Web_Jquery_Ajax/src/main/java&apos;&#x0D;&#x0A;- Original project: &apos;WebJSP&apos;&#x0D;&#x0A;- Destination element: &apos;Web_Jquery_Ajax/src/main/java&apos;&#x0D;&#x0A;- Original element: &apos;WebJSP/src/main/java/kr.or.kosa.dao&apos;" description="Copy package" destination="=Web_Jquery_Ajax/src\/main\/java" element1="/src\/main\/java&lt;kr.or.kosa.dao" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1685929758172" version="1.0"/>
+</session>
