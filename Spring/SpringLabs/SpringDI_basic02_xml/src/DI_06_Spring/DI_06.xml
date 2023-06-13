@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	   http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!--
+	객체의 생성과 조립(주입)
+	
+	spring 은 자신만의 컨테이너를 제공 (spring 전용 메모리 공간) 안에
+	xml 또는 annotation를 통해서 객체를 생성하고 조립하는 과정을 수행 (객체간의 관계 설정)
+	
+	컨테이너 안에 생성돤 객체를 불러서 .... getbean() 함수
+	
+	:IOC 컨테이너 (제어의 역전) : 스프링에게 맡김
+	내가 주도했던 코드에서 Spring 이 주체 .....
+	:작은 단위의 부품을 만들고 놓고 그 것을 조립하는 행위 (레고블럭)
+	
+			ArticleService service = new ArticleService(new MySqlDao());
+			Article article = new Article();
+			service.write(article);
+			
+			new가 붙어있는 것은 다 bean으로 만들어야 함.
+	  -->
+	
+	<!-- 관습적으로 bean의 id는 class명의 소문자버전으로 함 -->
+	
+	<bean id="mySqlDao" class="DI_06_Spring.MySqlDao"></bean>
+	<bean id="oracleDao" class="DI_06_Spring.OracleDao"></bean>
+	<bean id="service" class="DI_06_Spring.ArticleService">
+		<constructor-arg>
+		<!-- new ArticleService(new MySqlDao()) 요 부분! -->
+			<ref bean="oracleDao"/>
+			<!-- ref : 객체의 주소를 받겠다! -->
+		</constructor-arg>
+	</bean>
+	<bean id="article" class="DI_06_Spring.Article"></bean>
+	
+	
+	
+	
+	
+	
+	
+</beans>

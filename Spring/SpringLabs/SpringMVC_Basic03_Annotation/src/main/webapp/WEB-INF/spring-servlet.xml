@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+<!-- 객체의 생성과 조립
+	
+	ApplicatonContext context = new ClassPathXmlApplicationContext("DIConfig.xml");
+	컨테이너 생성 xml read 객체 생성 조립 ....
+	
+	Web에서는  ....
+	1. Tomcat 실행 (WAS 서버)
+	2. 클라이언트 요청 (hello.do ....)
+	3. Spring <url-pattern>*.do</url-pattern> 설정에 따라서 
+	3.1 DispatcherServlet 객체 생성 >> ** key point DispatcherServlet 가지고 놀 수 있는 IOC 컨테이너 자동 생성
+	3.2 그리고 ... spring-servlet.xml을 read 해서 >> DispatcherServlet이 가지고있는 IOC 컨테이너 안에 객체를 생성하고 주입합니다. 
+	3.3 약속 : xml 생성시 *-servlet.xml >> 별칭 spring-servlet.xml 이러면 [자동]으로 설정파일로 인정
+	>> <servlet-name> spring </servlet-name> 이름으로 파일이름.....
+	4. 컨테이너 안에 객체가 생서되고 주입이 일어나요 ^^
+	5. hello.do에 대해서 누가 동작할지는 자동화 되어있다. > 바로 handler mapping 작업
+	>> 핸들러가 객체를 컨테이너 안에서 찾음 >> 객체의 주소가 id="/hello.do" >> 그 객체의 handle request 함수를 실행
+	즉 public ModelAndView handleRequest 함수 자동 실행
+	6. ModelAndView 사용해서 필요한 객체를 담고 뷰를 지정한 후 리턴 한다. 
+	7. DispatcherServlet 받아서 internal ResorceViewResolver뷰의 완성을 요청 ...
+	8. view에게 ModelAndView 데이터 전달 목적
+	  
+	 -->
+	 
+	<context:annotation-config/>
+	<!-- 오토와이어 어노태이션 을 위한 선행객체를 자동으로 등록할 수 있다. -->
+	<!-- 공통 빈 -->
+	<bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix">
+			<value>/WEB-INF/views/</value>
+		</property>
+		<property name="suffix">
+			<value>.jsp</value>
+		</property>
+	</bean>
+	
+	<!-- TEST_1 -->
+	<bean id="helloController" class="com.controller.HelloController"></bean>
+	
+	<!-- TEST_2 -->
+	<!-- 
+	하나의 요청 주소 (같은주소)
+	전송방식 : GET, POST
+	화면, 처리 결정 .....
+	id는 의미없음 autowired로 타입만 있으면 주입이 되므로 !
+	 -->
+	 <bean class="com.controller.NewArticleController"></bean>
+</beans>

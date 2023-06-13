@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+						http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 
+		컨테이너 안에 사용할 객체의 생성 및 조립(주입) : 주입하는 parameter는 객체일수도, 값일 수도 있다. 
+		MessageBeanImple messagebean = new MessageBeanImple("hong"); // 생성자 주입 (객체 또는 값)
+		 messagebean.setGreeting("helloooooo"); // setter 주입 (객체 또는 값)
+		 messagebean.sayHello();
+		 
+		 <bean id="식별자 이름" name="m1,m2 m3;m4" class="경로"> 
+		 name >> 별칭 >> , 공백 ;  (구분자가 콤마, 한칸 space, 콜론 가능)
+ 	-->
+ 
+ 	<bean id="messagebean" name="m1,m2 m3;m4" class="DI_04_Spring.MessageBeanImple">
+ 		<!-- 
+ 		<constructor-arg>
+ 			<value>hong</value>
+ 		</constructor-arg>
+		객체가 만들어지고 생성자 주입 (hong)주입
+		setGreeting  함수를 구현하고 있는 member field 명을 쓰세요
+		
+		<property name="greeting">
+			<value>hello</value>
+		</property>
+		 -->
+		 
+		<constructor-arg value="hong"/>
+	    <property name="greeting" value="hello"/>
+ 	</bean>
+</beans>
