@@ -1,0 +1,19 @@
+package com.model;
+
+/*
+ DB에 테이블 (게시판 자료실)
+ create table photo (
+ 	name
+ 	age
+ 	image >> db테이블은 업로드한 파일 이름 (예 1.jpg  2.jpg)만 가짐 >> 실제 파일은 회사마다의 파일 서버에 저장
+ 	기타 : 
+ )
+ 
+ 실제 파일은 I/O 작업을 서버의 특정 폴더에 >> AWS >> s3 서버 > 파일서버
+ 성현이네 조 발표때 이미지 경로를 url로 잡아서 한것처럼!!
+ 
+ */
+
+public class Photo {
+
+}

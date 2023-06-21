@@ -1,0 +1,5 @@
+#Tomcat publish data
+#Mon Jun 19 15:17:21 KST 2023
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\KOSA\\.m2\\repository\\org\\springframework\\spring-web\\5.3.6\\spring-web-5.3.6.jar=C\:\\a\\sts-bundle\\pivotal-tc-server\\instances\\base-instance\\wtpwebapps\\Team5Mybatis\\WEB-INF\\lib\\spring-web-5.3.6.jar
+org.eclipse.jst.jee.server\:Team5Mybatis=C\:\\a\\sts-bundle\\pivotal-tc-server\\instances\\base-instance\\wtpwebapps\\Team5Mybatis
+org.eclipse.jst.jee.server\:SpringMVC_Basic08_Maven_Mybatis=C\:\\a\\sts-bundle\\pivotal-tc-server\\instances\\base-instance\\wtpwebapps\\SpringMVC_Basic08_Maven_Mybatis

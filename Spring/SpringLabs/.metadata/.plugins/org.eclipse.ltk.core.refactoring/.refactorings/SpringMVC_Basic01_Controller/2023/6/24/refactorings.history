@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;kr.or.kosa.introController&apos; to &apos;IntroController&apos;&#x0D;&#x0A;- Original project: &apos;SpringMVC_Basic01_Controller&apos;&#x0D;&#x0A;- Original element: &apos;kr.or.kosa.introController&apos;&#x0D;&#x0A;- Renamed element: &apos;kr.or.kosa.IntroController&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;introController&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java&lt;kr.or.kosa{introController.java[introController" matchStrategy="1" name="IntroController" qualified="false" references="true" similarDeclarations="false" stamp="1686634846336" textual="false" version="1.0"/>
+</session>

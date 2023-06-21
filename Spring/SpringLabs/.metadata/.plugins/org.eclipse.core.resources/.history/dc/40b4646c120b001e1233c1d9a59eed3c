@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Spring Annotation 연습하기</title>
+</head>
+<body>
+	<h3>TEST_1</h3>
+	<a href="hello.do">hello.do 요청하기 </a>
+
+	<h3>TEST_2 : http:전송 GET(link), POST(form 태그) > 화면 or 로직처리</h3>
+	<a href="article/newArticle.do">글쓰기</a>
+	
+	<h3>TEST_3 : http:전송 GET(link), POST(form 태그) > List(Collection)</h3>
+	<a href="order/order.do">주문하기(화면)</a>
+	
+	<h3>TEST_4 : spring parameter 다루기</h3>
+	Default : <a href="search/external.do">external.do</a> <br>
+	
+<!-- 	param : <a href="search/external.do?id=kgilm&name=hong&age=100">external.do</a> <br>
+	param2 : <a href="search/external.do?id=kgilm&name=hong">external.do</a> <br>
+	param3 : <a href="search/external.do?userid=kgilm&name=hong&age=100">external.do</a> <br>
+ -->
+ 
+	Default2 : <a href="search/external.do?p">external.do</a> <br>
+	Default2 : <a href="search/external.do?query=100">external.do</a> <br>
+	Default2 : <a href="search/external.do?p=200">external.do</a> <br>
+ 
+ <h3>TEST_5 : Spring Cookie 사용하기</h3>
+ 	<a href="cookie/make.do">make.do 쿠키생성하기</a>
+ 	<a href="cookie/view.do">view.do 쿠키보기</a>
+ 	<!-- 자바스크립트 쿠키아님! 서버에서 만들어서 클라이언트에게 전달하는 쿠키임 -->
+ 	
+</body>
+</html>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;NoticeDao.xml&apos; to &apos;NoticeDao.xml&apos;&#x0D;&#x0A;- Original project: &apos;SpringMVC_Basic10_Maven_POOL&apos;&#x0D;&#x0A;- Destination element: &apos;NoticeDao.xml&apos;&#x0D;&#x0A;- Original element: &apos;NoticeDao.xml&apos;" description="Copy file" element1="src/main/java/mapper/NoticeDao.xml" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1687142171206" target="/SpringMVC_Basic10_Maven_POOL/src/main/java/mapper/NoticeDao.xml" units="0" version="1.0"/>
+</session>

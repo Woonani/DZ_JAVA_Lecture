@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Wed Jun 21 18:29:10 KST 2023
+org.eclipse.jst.jee.server\:/binary\:C\:\\Douzone\\Spring\\SpringLabs\\Team5_spring4_ch07\\WebContent\\WEB-INF\\lib\\spring-web-4.0.4.RELEASE.jar=WEB-INF/lib/spring-web-4.0.4.RELEASE.jar
+org.eclipse.jst.jee.server\:/binary\:C\:\\Douzone\\Spring\\SpringLabs\\SpringMVC_Basic06_WebSite_Annotation_JDBC\\src\\main\\webapp\\WEB-INF\\lib\\spring-web-5.3.6.jar=WEB-INF/lib/spring-web-5.3.6.jar

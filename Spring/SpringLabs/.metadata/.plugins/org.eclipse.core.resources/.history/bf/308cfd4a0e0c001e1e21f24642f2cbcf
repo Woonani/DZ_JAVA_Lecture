@@ -1,0 +1,25 @@
+package kr.or.kosa;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
+
+import kr.or.kosa.service.SampleService;
+import kr.or.kosa.service.SampleServiceImpl;
+
+public class Main {
+
+	public static void main(String[] args) throws Exception {
+//		SampleService sampleService2 = new SampleServiceImpl();
+//		sampleService2.doadd(1, 0);
+		ApplicationContext context = new FileSystemXmlApplicationContext("src/main/webapp/WEB-INF/spring/root-context.xml");
+        SampleService sampleService = (SampleService) context.getBean("sampleServiceImpl");
+        //sampleService.doadd(1, 1);
+        //sampleService.domultiply(1, 1);
+        //sampleService.dodivide(1, 1);
+        sampleService.dominus(1, 1);
+       // sampleService.dodivide(1, 0);
+        ((FileSystemXmlApplicationContext) context).close();
+	}
+
+}
+                                                                                                                                                                                                                                                                                   

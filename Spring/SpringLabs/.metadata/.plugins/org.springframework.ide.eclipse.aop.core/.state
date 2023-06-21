@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
-<aop-project name="kosa"/>
+<aop-project name="Team5_spring4_ch07"/>
+<aop-project name="SpringMVC_Maven"/>
+<aop-project name="Aop"/>
+<aop-project name="SpringMVC_Basic10_Transaction"/>
+<aop-project name="SpringMVC_Basic14_Security_password"/>
+<aop-project name="aop_HD"/>
+<aop-project name="SpringDI_basic02_xml"/>
 <aop-project name="SpringDI_basic01"/>
+<aop-project name="SpringMVC_Basic08_Maven_Mybatis"/>
+<aop-project name="SpringMVC_Basic04_WebSite_Annotation"/>
+<aop-project name="SpringMVC_Basic13_Security_password_Sample">
+<aspect-definition advice-class-name="org.springframework.transaction.interceptor.TransactionInterceptor" advice-method-name="invoke" advice-method-parameter-types="org.aopalliance.intercept.MethodInvocation" advice-type="AROUND" aspect-end-line-number="52" aspect-name="org.springframework.transaction.interceptor.TransactionInterceptor#SpringMVC_Basic13_Security_password_Sample#src/main/webapp/WEB-INF/spring/root-context.xml#52" aspect-start-line-number="52" factory-id="org.springframework.ide.eclipse.aop.core.javaAdvisorDefinitionElementFactory" file="/SpringMVC_Basic13_Security_password_Sample/src/main/webapp/WEB-INF/spring/root-context.xml" pointcut-expression="(@within(org.springframework.transaction.annotation.Transactional) || @annotation(org.springframework.transaction.annotation.Transactional)) &amp;&amp; execution(* *..*(..))" proxy-target-class="true">
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:SpringMVC_Basic13_Security_password_Sample|3:src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml|7:beans:18|8:noticeService:18" bean-file="/SpringMVC_Basic13_Security_password_Sample/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml" bean-start-line="18" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/SpringMVC_Basic13_Security_password_Sample/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml" source="=SpringMVC_Basic13_Security_password_Sample/C:\/Users\/KOSA\/.m2\/repository\/org\/springframework\/spring-tx\/4.2.5.RELEASE\/spring-tx-4.2.5.RELEASE.jar=/maven.pomderived=/true=/=/org.eclipse.jst.component.dependency=/\/WEB-INF\/lib=/=/maven.pomderived=/true=/=/org.eclipse.jst.component.archivename=/spring-tx-4.2.5.RELEASE.jar=/=/maven.groupId=/org.springframework=/=/maven.artifactId=/spring-tx=/=/maven.version=/4.2.5.RELEASE=/=/maven.scope=/compile=/&lt;org.springframework.transaction.interceptor(TransactionInterceptor.class[TransactionInterceptor~invoke~Lorg.aopalliance.intercept.MethodInvocation;" source-start-line="-1" target="=SpringMVC_Basic13_Security_password_Sample/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;kr.co.test.service{NoticeService.java[NoticeService~noticeReg~QNotice;~QHttpServletRequest;" target-start-line="44"/>
+</aspect-definition>
+</aop-project>
+<aop-project name="SpringMVC_Basic12_Security_Sample"/>
+<aop-project name="SpringMVC_Basic09_Maven_POOL"/>
+<aop-project name="SpringMVC_Basic09_Maven_Mybatis2_SqlLog"/>
+<aop-project name="SpringMVC_Manven_Tver"/>
+<aop-project name="Validator_1"/>
+<aop-project name="kosa"/>
+<aop-project name="SpringMVC_Basic03_Annotation"/>
+<aop-project name="SpringMVC_Basic01_Controller"/>
+<aop-project name="SpringMVC_Basic10_Team5Mybatis"/>
+<aop-project name="SpringMVC_Basic11_Security"/>
+<aop-project name="SpringDI_Basic03_Annotations"/>
+<aop-project name="Mybatis_Web_SpringBoard_07"/>
 </aop-reference-model>
